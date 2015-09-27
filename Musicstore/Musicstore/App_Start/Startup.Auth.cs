@@ -54,15 +54,14 @@ namespace Musicstore
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "780046542107626",
+               appSecret: "db5503fd889c9c84ee50de1ac28ab7b9");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions() {
+                ClientId = "752620949708-5b781gqtsmrpicpcinccudv66qbfgkk9.apps.googleusercontent.com",
+                ClientSecret = "pnPnewqAKtebuKg-G2G03Nb2"
+            });
         }
     }
 }

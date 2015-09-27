@@ -270,6 +270,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_LocalResources\English.resx" />
+    <Content Include="App_LocalResources\Serbian.resx" />
     <EmbeddedResource Include="Migrations\201509261458484_AddedAccountNameToUserTable.resx">
       <DependentUpon>201509261458484_AddedAccountNameToUserTable.cs</DependentUpon>
     </EmbeddedResource>

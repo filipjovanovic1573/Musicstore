@@ -367,7 +367,10 @@ namespace Musicstore.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new User { UserName = model.Email, Email = model.Email };
+
+                ViewBag.ExternalInfo = info.ExternalIdentity.GetUserName();
+                //info.ExternalIdentity.GetUserName()
+                var user = new User { UserName = info.ExternalIdentity.Name, Email = model.Email };
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
