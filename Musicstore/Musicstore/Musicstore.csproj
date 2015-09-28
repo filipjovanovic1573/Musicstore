@@ -180,6 +180,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PublisherController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -195,10 +196,23 @@
     <Compile Include="Migrations\201509261558528_RenamedTables.Designer.cs">
       <DependentUpon>201509261558528_RenamedTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201509282250252_AddedPublisherTable.cs" />
+    <Compile Include="Migrations\201509282250252_AddedPublisherTable.Designer.cs">
+      <DependentUpon>201509282250252_AddedPublisherTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509282253048_RenamedPublisherTable.cs" />
+    <Compile Include="Migrations\201509282253048_RenamedPublisherTable.Designer.cs">
+      <DependentUpon>201509282253048_RenamedPublisherTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509282309383_AddedValidationToPublisher.cs" />
+    <Compile Include="Migrations\201509282309383_AddedValidationToPublisher.Designer.cs">
+      <DependentUpon>201509282309383_AddedValidationToPublisher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="ViewModels\ManageViewModels.cs" />
+    <Compile Include="Models\PublisherModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -257,6 +271,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Publisher\Create.cshtml" />
+    <Content Include="Views\Publisher\Delete.cshtml" />
+    <Content Include="Views\Publisher\Details.cshtml" />
+    <Content Include="Views\Publisher\Edit.cshtml" />
+    <Content Include="Views\Publisher\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -280,6 +299,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201509261558528_RenamedTables.resx">
       <DependentUpon>201509261558528_RenamedTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509282250252_AddedPublisherTable.resx">
+      <DependentUpon>201509282250252_AddedPublisherTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509282253048_RenamedPublisherTable.resx">
+      <DependentUpon>201509282253048_RenamedPublisherTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509282309383_AddedValidationToPublisher.resx">
+      <DependentUpon>201509282309383_AddedValidationToPublisher.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

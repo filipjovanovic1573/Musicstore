@@ -33,6 +33,9 @@ namespace Musicstore.Models {
             modelBuilder.Entity<IdentityUserLogin>().ToTable("UserLogin");
             modelBuilder.Entity<IdentityUserRole>().ToTable("UserRole");
             modelBuilder.Entity<User>().ToTable("User");
+            modelBuilder.Entity<Publisher>().ToTable("Publisher");
         }
+
+        public DbSet<Publisher> Publishers { get; set; }
     }
 }
