@@ -208,7 +208,16 @@
     <Compile Include="Migrations\201509282309383_AddedValidationToPublisher.Designer.cs">
       <DependentUpon>201509282309383_AddedValidationToPublisher.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201509291144167_AddedSongTable.cs" />
+    <Compile Include="Migrations\201509291144167_AddedSongTable.Designer.cs">
+      <DependentUpon>201509291144167_AddedSongTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509291148100_RenamedSongTable.cs" />
+    <Compile Include="Migrations\201509291148100_RenamedSongTable.Designer.cs">
+      <DependentUpon>201509291148100_RenamedSongTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\SongModel.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="ViewModels\ManageViewModels.cs" />
@@ -309,6 +318,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201509282309383_AddedValidationToPublisher.resx">
       <DependentUpon>201509282309383_AddedValidationToPublisher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509291144167_AddedSongTable.resx">
+      <DependentUpon>201509291144167_AddedSongTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509291148100_RenamedSongTable.resx">
+      <DependentUpon>201509291148100_RenamedSongTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
