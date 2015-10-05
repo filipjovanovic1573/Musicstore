@@ -308,11 +308,11 @@
     <Content Include="Views\Publisher\Details.cshtml" />
     <Content Include="Views\Publisher\Edit.cshtml" />
     <Content Include="Views\Publisher\Index.cshtml" />
+    <Content Include="Views\AdminPanel\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="UploadedSongs\" />
-    <Folder Include="Views\AdminPanel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
