@@ -11,6 +11,8 @@ namespace Musicstore {
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/footer").Include("~/Scripts/footer.js"));
+            bundles.Add(new ScriptBundle("~/bundles/helper").Include("~/Scripts/helper.js"));
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(

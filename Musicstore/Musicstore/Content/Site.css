@@ -1,6 +1,7 @@
 ﻿body {
     /*padding-top: 60px;
     padding-bottom: 20px;*/
+    bottom: 0px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -30,9 +31,9 @@ a:hover, a {
     text-decoration: none !important;
 }
 
-a:hover {
-    color: #3375b0;
-}
+    a:hover {
+        color: #3375b0;
+    }
 
 .margin-bottom-10 {
     margin-bottom: 10px;
@@ -42,10 +43,56 @@ a:hover {
     margin-bottom: 3px;
 }
 
-footer ul li a {
-    color: #666;
+hr {
+    border: 0;
+    margin-bottom: 10px;
+    height: 1px;
+    background: #ccc;
+    background-image: linear-gradient(to right, #ccc, #a5a5a5, #ccc);
 }
 
-footer ul li a:hover {
-    color: #400;
+footer {
+    bottom: 100px;
+}
+
+    footer ul li a {
+        color: #666;
+    }
+
+        footer ul li a:hover {
+            color: #2b2b2b;
+        }
+
+.padding-left-0 {
+    padding-left: 0px;
+}
+
+.category {
+    max-height: 360px;
+    max-width: 360px;
+    margin-right: 0px !important;
+    background: #ccc;
+}
+
+    .category img {
+        max-height: inherit;
+    }
+
+    .category a {
+        color: white;
+    }
+
+    .category p {
+        margin-bottom: 40px !important;
+    }
+
+    .category a:hover {
+        color: #ccc;
+    }
+
+.category-name {
+    width: 100%;
+    font-size: larger;
+    max-width: 360px;
+    background: #2b2b2b;
 }

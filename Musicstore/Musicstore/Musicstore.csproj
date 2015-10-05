@@ -178,6 +178,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminPanelController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PublisherController.cs" />
@@ -216,10 +217,27 @@
     <Compile Include="Migrations\201509291148100_RenamedSongTable.Designer.cs">
       <DependentUpon>201509291148100_RenamedSongTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201509291522151_AddedLinkFieldToSongTable.cs" />
+    <Compile Include="Migrations\201509291522151_AddedLinkFieldToSongTable.Designer.cs">
+      <DependentUpon>201509291522151_AddedLinkFieldToSongTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509291530204_AddedValidationToSongTable.cs" />
+    <Compile Include="Migrations\201509291530204_AddedValidationToSongTable.Designer.cs">
+      <DependentUpon>201509291530204_AddedValidationToSongTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510051159081_AddedSongTable1.cs" />
+    <Compile Include="Migrations\201510051159081_AddedSongTable1.Designer.cs">
+      <DependentUpon>201510051159081_AddedSongTable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510051200143_AddedSongTable2.cs" />
+    <Compile Include="Migrations\201510051200143_AddedSongTable2.Designer.cs">
+      <DependentUpon>201510051200143_AddedSongTable2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\SongModel.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="ViewModels\CategoryViewModel.cs" />
     <Compile Include="ViewModels\ManageViewModels.cs" />
     <Compile Include="Models\PublisherModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -236,6 +254,8 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\footer.js" />
+    <Content Include="Scripts\Helper.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -247,7 +267,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -289,6 +311,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="UploadedSongs\" />
+    <Folder Include="Views\AdminPanel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -324,6 +348,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201509291148100_RenamedSongTable.resx">
       <DependentUpon>201509291148100_RenamedSongTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509291522151_AddedLinkFieldToSongTable.resx">
+      <DependentUpon>201509291522151_AddedLinkFieldToSongTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509291530204_AddedValidationToSongTable.resx">
+      <DependentUpon>201509291530204_AddedValidationToSongTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510051159081_AddedSongTable1.resx">
+      <DependentUpon>201510051159081_AddedSongTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510051200143_AddedSongTable2.resx">
+      <DependentUpon>201510051200143_AddedSongTable2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

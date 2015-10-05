@@ -38,5 +38,6 @@ namespace Musicstore.Models {
         }
 
         public DbSet<Publisher> Publishers { get; set; }
+        public DbSet<Song> Songs { get; set; }
     }
 }
