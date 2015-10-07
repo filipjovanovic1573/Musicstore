@@ -29,60 +29,62 @@
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container body-content" style="min-height: 745px;">
         @RenderBody()
-        <hr />
-        <footer>
-            <div id="padd-div" class="col-md-2 padding-left-0">
-                <p class="margin-bottom-3"><strong>Partners & Publishers</strong></p>
-                <ul class="list-unstyled text-muted">
-                    <li><a href="#">List of publishers</a></li>
-                    <li><a href="#">Are you a publisher?</a></li>
-                    <li><a href="#">List of partners</a></li>
-                    <li><a href="#">Become a partner</a></li>
-                </ul>
-            </div>
-            <div class="col-md-2">
-                <p class="margin-bottom-3"><strong>API</strong></p>
-                <ul class="list-unstyled text-muted">
-                    <li><a href="#">Get API</a></li>
-                    <li><a href="#">Docs</a></li>
-                    <li><a href="#">Bugs</a></li>
-                    <li><a href="#">Any suggestions?</a></li>
-                </ul>
-            </div>
-            <div class="col-md-2">
-                <p class="margin-bottom-3"><strong>Music store</strong></p>
-                <ul class="list-unstyled text-muted">
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-            <div class="col-md-2">
-                <p class="margin-bottom-3"><strong>Social</strong></p>
-                <ul class="list-unstyled text-muted">
-                    <li><a href="http://facebook.com">Facebook</a></li>
-                    <li><a href="http://twitter.com">Twitter</a></li>
-                    <li><a href="http://plus.google.com">Google+</a></li>
-                </ul>
-            </div>
-            <div class="col-md-2">
-                <p class="margin-bottom-3"><strong>Mobile</strong></p>
-                <ul class="list-unstyled text-muted">
-                    <li><a href="#">Android</a></li>
-                    <li><a href="#">iOS</a></li>
-                    <li><a href="#">Windows phone</a></li>
-                </ul>
-            </div>
-            <div class="col-md-2">
-                <p class="margin-bottom-3"><strong>Univerzitet Metropolitan</strong></p>
-                <ul class="list-unstyled text-muted">
-                    <li><a href="http://metropolitan.ac.rs">Home page</a></li>
-                    <li><a href="http://metropolitan.edu.rs/o-univerzitetu/">About</a></li>
-                </ul>
-            </div>
-        </footer>
     </div>
+    <footer class="container body-content">
+        <hr />
+        <div id="padd-div" class="col-md-2 padding-left-0">
+            <p class="margin-bottom-3"><strong>Partners & Publishers</strong></p>
+            <ul class="list-unstyled text-muted">
+                <li><a href="#">List of publishers</a></li>
+                <li><a href="#">Are you a publisher?</a></li>
+                <li><a href="#">List of partners</a></li>
+                <li><a href="#">Become a partner</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <p class="margin-bottom-3"><strong>API</strong></p>
+            <ul class="list-unstyled text-muted">
+                <li><a href="#">Get API</a></li>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Bugs</a></li>
+                <li><a href="#">Any suggestions?</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <p class="margin-bottom-3"><strong>Music store</strong></p>
+            <ul class="list-unstyled text-muted">
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <p class="margin-bottom-3"><strong>Social</strong></p>
+            <ul class="list-unstyled text-muted">
+                <li><a href="http://facebook.com">Facebook</a></li>
+                <li><a href="http://twitter.com">Twitter</a></li>
+                <li><a href="http://plus.google.com">Google+</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <p class="margin-bottom-3"><strong>Mobile</strong></p>
+            <ul class="list-unstyled text-muted">
+                <li><a href="#">Android</a></li>
+                <li><a href="#">iOS</a></li>
+                <li><a href="#">Windows phone</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <p class="margin-bottom-3"><strong>Univerzitet Metropolitan</strong></p>
+            <ul class="list-unstyled text-muted">
+                <li><a href="http://metropolitan.ac.rs">Home page</a></li>
+                <li><a href="http://metropolitan.edu.rs/o-univerzitetu/">About</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/footer")

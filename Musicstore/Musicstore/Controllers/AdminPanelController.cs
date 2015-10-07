@@ -24,12 +24,12 @@ namespace Musicstore.Controllers {
                 userManager = value;
             }
         }
-        
+
         // GET: AdminPanel
         public ActionResult Index() {
             return View();
         }
-
+        
         public async Task<ActionResult> ListUsers() {
             return View(await db.Users.ToListAsync());
         }
@@ -50,6 +50,33 @@ namespace Musicstore.Controllers {
                 Roles = roles
             };
             return View(detailsUser);
+        }
+
+        //Edit needs rework cuz its shit now :(
+        public ActionResult EditUser(string id) {
+            var user = UserManager.FindById(id);
+            var roles = UserManager.GetRoles(id).ToArray();
+            var editUser = new EditViewModel() {
+                Id = user.Id,
+                UserName = user.UserName,
+                Email = user.Email,
+                PhoneNumber = user.PhoneNumber,
+                Roles = roles
+            };
+            return View(editUser);
+        }
+
+        public ActionResult DeleteUser(string id) {
+            var user = UserManager.FindById(id);
+            return View(user);
+        }
+
+        [HttpPost, ActionName("DeleteUser")]
+        public ActionResult DeleteUserConfirmed(string id) {
+            var user = UserManager.FindById(id);
+            UserManager.Delete(user);
+            db.SaveChanges();
+            return RedirectToAction("ListUsers", "AdminPanel");
         }
     }
 }

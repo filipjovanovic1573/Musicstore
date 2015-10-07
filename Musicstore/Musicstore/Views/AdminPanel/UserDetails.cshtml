@@ -1,14 +1,14 @@
 ﻿@model Musicstore.ViewModels.DetailsViewModel
 
 @{
-    ViewBag.Title = "UserDetails";
+    ViewBag.Title = "Users details";
 }
 
 <div>
     <h4>Details of user @Html.DisplayFor(model => model.UserName)</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt class="margin-bottom-3">
+        <dt>
             @Html.DisplayNameFor(model => model.UserName)
         </dt>
 
@@ -16,7 +16,7 @@
             @Html.DisplayFor(model => model.UserName)
         </dd>
 
-        <dt class="margin-bottom-3">
+        <dt>
             @Html.DisplayNameFor(model => model.Email)
         </dt>
 
@@ -24,7 +24,7 @@
             @Html.DisplayFor(model => model.Email)
         </dd>
 
-        <dt class="margin-bottom-3">
+        <dt>
             @Html.DisplayNameFor(model => model.EmailConfirmed)
         </dt>
 
@@ -32,7 +32,7 @@
             @Html.DisplayFor(model => model.EmailConfirmed)
         </dd>
 
-        <dt class="margin-bottom-3">
+        <dt>
             @Html.DisplayNameFor(model => model.PhoneNumber)
         </dt>
 
@@ -40,7 +40,7 @@
             @Html.DisplayFor(model => model.PhoneNumber)
         </dd>
 
-        <dt class="margin-bottom-3">
+        <dt>
             @Html.DisplayNameFor(model => model.PhoneNumberConfirmed)
         </dt>
 
@@ -48,7 +48,7 @@
             @Html.DisplayFor(model => model.PhoneNumberConfirmed)
         </dd>
 
-        <dt class="margin-bottom-3">
+        <dt>
             @Html.DisplayNameFor(model => model.TwoFactor)
         </dt>
 
@@ -56,7 +56,7 @@
             @Html.DisplayFor(model => model.TwoFactor)
         </dd>
 
-        <dt class="margin-bottom-3">
+        <dt>
             @Html.DisplayNameFor(model => model.LockoutEnabled)
         </dt>
 
@@ -64,7 +64,7 @@
             @Html.DisplayFor(model => model.LockoutEnabled)
         </dd>
 
-        <dt class="margin-bottom-3">
+        <dt>
             @Html.DisplayNameFor(model => model.LockoutEndDate)
         </dt>
 
@@ -75,6 +75,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "ListUsers")
+    @Html.ActionLink("Edit", "EditUser", new { id = Model.Id }, new { @class = "btn-sm btn-warning" }) &nbsp;
+    @Html.ActionLink("Back to List", "ListUsers", null, new { @class = "btn-sm btn-primary" })
 </p>

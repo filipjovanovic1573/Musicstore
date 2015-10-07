@@ -312,6 +312,8 @@
     <Content Include="Views\AdminPanel\Index.cshtml" />
     <Content Include="Views\AdminPanel\ListUsers.cshtml" />
     <Content Include="Views\AdminPanel\UserDetails.cshtml" />
+    <Content Include="Views\AdminPanel\EditUser.cshtml" />
+    <Content Include="Views\AdminPanel\DeleteUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

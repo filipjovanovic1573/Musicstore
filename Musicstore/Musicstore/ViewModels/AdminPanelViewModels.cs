@@ -24,6 +24,18 @@ namespace Musicstore.ViewModels {
         public bool LockoutEnabled { get; set; }
         [Display(Name = "Locked until")]
         public DateTime? LockoutEndDate { get; set; }
+        [Display(Name = "Roles")]
+        public string[] Roles { get; set; }
+    }
+
+    public class EditViewModel {
+        public string Id { get; set; }
+        [Display(Name = "Username")]
+        public string UserName { get; set; }
+        public string Email { get; set; }
+        [Display(Name = "Phone")]
+        public string PhoneNumber { get; set; }
+        [Display(Name = "Roles")]
         public string[] Roles { get; set; }
     }
 }

@@ -96,3 +96,24 @@ footer {
     max-width: 360px;
     background: #2b2b2b;
 }
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    border-top: 0px;
+    margin-top: 30px;
+    padding-left: 0px;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th {
+    border-bottom: 1px solid #ccc !important;
+}
+
+dl > dt {
+    margin-bottom: 3px;
+}
