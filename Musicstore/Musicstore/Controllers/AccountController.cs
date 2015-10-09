@@ -13,36 +13,16 @@ using Musicstore.ViewModels;
 
 namespace Musicstore.Controllers {
     [Authorize]
-    public class AccountController : Controller {
-        private ApplicationSignInManager _signInManager;
-        private ApplicationUserManager _userManager;
+    public class AccountController : BaseController {
 
         public AccountController() {
         }
 
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager) {
-            UserManager = userManager;
-            SignInManager = signInManager;
-        }
-
-        public ApplicationSignInManager SignInManager {
-            get {
-                return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
-            }
-            private set {
-                _signInManager = value;
-            }
-        }
-
-        public ApplicationUserManager UserManager {
-            get {
-                return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            }
-            private set {
-                _userManager = value;
-            }
-        }
-
+        //public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager) {
+        //    UserManager = userManager;
+        //    SignInManager = signInManager;
+        //}
+        
         //
         // GET: /Account/Login
         [AllowAnonymous]
@@ -133,6 +113,7 @@ namespace Musicstore.Controllers {
                 var user = new User { UserName = model.AccountName, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if(result.Succeeded) {
+                    await UserManager.AddToRoleAsync(user.Id, "User");
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
@@ -355,18 +336,6 @@ namespace Musicstore.Controllers {
         }
 
         protected override void Dispose(bool disposing) {
-            if(disposing) {
-                if(_userManager != null) {
-                    _userManager.Dispose();
-                    _userManager = null;
-                }
-
-                if(_signInManager != null) {
-                    _signInManager.Dispose();
-                    _signInManager = null;
-                }
-            }
-
             base.Dispose(disposing);
         }
 

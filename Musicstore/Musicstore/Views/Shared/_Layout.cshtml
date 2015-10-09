@@ -24,6 +24,7 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Admin panel", "Index", "AdminPanel")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -37,7 +38,7 @@
         <div id="padd-div" class="col-md-2 padding-left-0">
             <p class="margin-bottom-3"><strong>Partners & Publishers</strong></p>
             <ul class="list-unstyled text-muted">
-                <li><a href="#">List of publishers</a></li>
+                <li>@Html.ActionLink("List of publishers", "Index", "Publisher")</li>
                 <li><a href="#">Are you a publisher?</a></li>
                 <li><a href="#">List of partners</a></li>
                 <li><a href="#">Become a partner</a></li>

@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 
 namespace Musicstore.Controllers {
-    public class HomeController : Controller {
+    public class HomeController : BaseController {
         public ActionResult Index() {
             CategoryViewModel[] c = { new CategoryViewModel() { Name = "Rock", ImageLink = "http://i.imgur.com/XO3DZVV.jpg" },
                                       new CategoryViewModel() { Name = "Hip-Hop", ImageLink = "http://i.imgur.com/RYaSSs2.jpg"},

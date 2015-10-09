@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -13,8 +14,14 @@ namespace Musicstore.Models {
             // Add custom user claims here
             return userIdentity;
         }
-
+        
         //public string AccountName { get; set; }
+    }
+
+    public class Role : IdentityRole {
+        public override string ToString() {
+            return this.Name;
+        }
     }
 
     public class ApplicationDbContext : IdentityDbContext<User> {

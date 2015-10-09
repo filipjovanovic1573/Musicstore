@@ -10,8 +10,7 @@ using System.Web.Mvc;
 using Musicstore.Models;
 
 namespace Musicstore.Controllers {
-    public class PublisherController : Controller {
-        private ApplicationDbContext db = new ApplicationDbContext();
+    public class PublisherController : BaseController {
 
         // GET: Publisher
         public async Task<ActionResult> Index() {

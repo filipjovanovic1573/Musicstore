@@ -179,6 +179,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminPanelController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PublisherController.cs" />
@@ -232,6 +233,10 @@
     <Compile Include="Migrations\201510051200143_AddedSongTable2.cs" />
     <Compile Include="Migrations\201510051200143_AddedSongTable2.Designer.cs">
       <DependentUpon>201510051200143_AddedSongTable2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510091146422_RoleTest.cs" />
+    <Compile Include="Migrations\201510091146422_RoleTest.Designer.cs">
+      <DependentUpon>201510091146422_RoleTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\SongModel.cs" />
@@ -314,10 +319,12 @@
     <Content Include="Views\AdminPanel\UserDetails.cshtml" />
     <Content Include="Views\AdminPanel\EditUser.cshtml" />
     <Content Include="Views\AdminPanel\DeleteUser.cshtml" />
+    <Content Include="Views\AdminPanel\CreateRole.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="UploadedSongs\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -365,6 +372,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510051200143_AddedSongTable2.resx">
       <DependentUpon>201510051200143_AddedSongTable2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510091146422_RoleTest.resx">
+      <DependentUpon>201510091146422_RoleTest.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

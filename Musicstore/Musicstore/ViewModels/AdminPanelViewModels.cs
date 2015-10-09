@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Musicstore.ViewModels {
     public class DetailsViewModel {
@@ -36,6 +37,6 @@ namespace Musicstore.ViewModels {
         [Display(Name = "Phone")]
         public string PhoneNumber { get; set; }
         [Display(Name = "Roles")]
-        public string[] Roles { get; set; }
+        public IEnumerable<SelectListItem> Roles { get; set; }
     }
 }
