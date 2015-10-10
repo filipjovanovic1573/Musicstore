@@ -1,0 +1,4 @@
+﻿@using(Html.BeginForm("FindSong", "Search", FormMethod.Get, new { @class = "form-inline navbar-form margin-top-12 navbar-right" })) {
+    @Html.TextBox("q", null, new { @class = "form-control input-sm width-200", @placeholder = "Search..." })
+}
+

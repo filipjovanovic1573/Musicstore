@@ -21,16 +21,17 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Admin panel", "Index", "AdminPanel")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                    @Html.Partial("_AdminPanelPartial")
                 </ul>
                 @Html.Partial("_LoginPartial")
+                @Html.Partial("_SearchPartial")
             </div>
         </div>
     </div>
-    <div class="container body-content" style="min-height: 745px;">
+    <div class="container body-content" style="min-height: 735px">
         @RenderBody()
     </div>
     <footer class="container body-content">

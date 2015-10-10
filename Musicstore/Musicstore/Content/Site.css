@@ -35,12 +35,24 @@ a:hover, a {
         color: #3375b0;
     }
 
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
 .margin-bottom-10 {
     margin-bottom: 10px;
 }
 
 .margin-bottom-3 {
     margin-bottom: 3px;
+}
+
+.margin-top-12 {
+    margin-top: 12px;
+}
+
+.width-200 {
+    width: 200px !important;
 }
 
 hr {
@@ -68,6 +80,7 @@ footer {
 }
 
 .category {
+    position: relative;
     max-height: 360px;
     max-width: 360px;
     margin-right: 0px !important;
@@ -82,20 +95,44 @@ footer {
         color: white;
     }
 
-    .category p {
-        margin-bottom: 40px !important;
+        .category a:hover {
+            color: #ccc;
+        }
+
+    .category span {
+        display: block;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        background: rgba(0,0,0,.5);
+        -moz-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
     }
 
-    .category a:hover {
-        color: #ccc;
+    .category .text {
+        display: none;
+        color: white;
+        -moz-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
     }
 
-.category-name {
-    width: 100%;
-    font-size: larger;
-    max-width: 360px;
-    background: #2b2b2b;
-}
+    .category:hover span {
+        position: absolute;
+        opacity: 1;
+    }
+
+    .category:hover .text {
+        display: block;
+        position: absolute;
+        background: none;
+        font-size: xx-large;
+        top: 45%;
+        text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
+        opacity: 1;
+    }
+
 
 .table > thead > tr > th,
 .table > tbody > tr > th,

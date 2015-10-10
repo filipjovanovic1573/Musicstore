@@ -81,6 +81,7 @@ namespace Musicstore.Controllers {
                 return HttpNotFound();
             }
 
+            ViewBag.DefaultRole = UserManager.GetRoles(user.Id)[0];
             var roles = new SelectList(db.Roles.ToArray(), "Id", "Name");
             var editUser = new EditViewModel() {
                 Id = user.Id,
@@ -128,6 +129,10 @@ namespace Musicstore.Controllers {
         [HttpPost, ActionName("DeleteUser")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteUserConfirmed(string id) {
+            if(!ModelState.IsValid) {
+                return View();
+            }
+
             if(id == null) {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }

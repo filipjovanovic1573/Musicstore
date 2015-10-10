@@ -183,6 +183,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PublisherController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -273,6 +274,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="UploadedSongs\rsz_search.png" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -320,10 +322,12 @@
     <Content Include="Views\AdminPanel\EditUser.cshtml" />
     <Content Include="Views\AdminPanel\DeleteUser.cshtml" />
     <Content Include="Views\AdminPanel\CreateRole.cshtml" />
+    <Content Include="Views\Shared\_AdminPanelPartial.cshtml" />
+    <Content Include="Views\Shared\_SearchPartial.cshtml" />
+    <Content Include="Views\Search\FindSong.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="UploadedSongs\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>

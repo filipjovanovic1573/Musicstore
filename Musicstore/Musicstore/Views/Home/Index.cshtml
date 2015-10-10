@@ -36,27 +36,29 @@
         </div>*@
 </div>
 <div class="row">
-<h4 class="col-md-3">Categories</h4></div>
+    <h4 class="col-sm-3">Categories</h4>
+</div>
 
 <div class="row">
     @foreach(CategoryViewModel c in ViewBag.Categories) {
         <div class="col-sm-4">
             <div class="category">
                 <a href="#">
+                    <span></span>
+                    <span class="text text-center">@c.Name</span>
                     <img class="img-responsive" src="@c.ImageLink" />
-                    <p class="category-name text-center">@c.Name</p>
                 </a>
             </div>
+            <br /><br />
         </div>
     }
-
-    <div class="col-sm-4">
-        <div class="category">
-            <a href="#">
-                <img class="img-responsive" src="http://icons.iconarchive.com/icons/icons8/windows-8/512/Logos-Google-Web-Search-icon.png" />
-                <p class="category-name text-center">Search for songs</p>
-            </a>
-        </div>
-    </div>
+    @*<div class="col-sm-4">
+            <div class="category">
+                <a href="#">
+                    <img class="img-responsive" src="http://i.imgur.com/Ucb1lUB.png" />
+                    <p class="category-name text-center">Search for songs</p>
+                </a>
+            </div>
+        </div>*@
+    <br />
 </div>
-<br />

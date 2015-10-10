@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Edit user";
+    string defRole = ViewBag.DefaultRole;
 }
 
 <h4>Edit user @Html.DisplayFor(model => model.UserName)</h4>
@@ -41,7 +42,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Roles, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("Role", Model.Roles, null, new { @class = "form-control" })
+                @Html.DropDownList("Role", Model.Roles, "Select role | Current is " + defRole, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.Roles, "", new { @class = "text-danger" })
             </div>
         </div>
