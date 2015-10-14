@@ -43,7 +43,7 @@
     @foreach(CategoryViewModel c in ViewBag.Categories) {
         <div class="col-sm-4">
             <div class="category">
-                <a href="#">
+                <a href="@Url.Action("FindCategory", "Search", new { q = c.Name})">
                     <span></span>
                     <span class="text text-center">@c.Name</span>
                     <img class="img-responsive" src="@c.ImageLink" />

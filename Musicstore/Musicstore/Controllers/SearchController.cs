@@ -18,5 +18,10 @@ namespace Musicstore.Controllers {
             ViewBag.SearchString = q;
             return View(await db.Songs.Where(s => s.Name.Contains(q)).ToListAsync());
         }
+
+        public async Task <ActionResult> FindCategory(string q) {
+            ViewBag.SearchCategory = q;
+            return View(await db.Songs.Where(s => s.Genre.Contains(q)).ToListAsync());
+        }
     }
 }
