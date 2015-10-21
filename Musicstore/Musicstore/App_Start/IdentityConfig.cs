@@ -11,12 +11,37 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Musicstore.Models;
+using SendGrid;
+using System.Net;
+using System.Configuration;
+using System.Web.Services.Description;
+using System.Net.Mail;
+using System.Net.Mime;
 
 namespace Musicstore {
     public class EmailService : IIdentityMessageService {
         public Task SendAsync(IdentityMessage message) {
-            // Plug in your email service here to send an email.
-            return Task.FromResult(0);
+            int port = int.Parse(Properties.Resources.smtpPort);
+
+            var smtp = new SmtpClient(Properties.Resources.sendgridSmtp, port);
+
+            var credentials = new NetworkCredential(Properties.Resources.mailAccount, Properties.Resources.mailPassword);
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = credentials;
+            smtp.EnableSsl = false;
+
+            var to = new MailAddress(message.Destination);
+            var from = new MailAddress("fil.93@hotmail.com", "Support");
+
+            var msg = new MailMessage();
+
+            msg.To.Add(to);
+            msg.From = from;
+            msg.IsBodyHtml = true;
+            msg.Subject = message.Subject;
+            msg.Body = message.Body;
+
+            return smtp.SendMailAsync(msg);
         }
     }
 
@@ -69,7 +94,7 @@ namespace Musicstore {
             var dataProtectionProvider = options.DataProtectionProvider;
             if(dataProtectionProvider != null) {
                 manager.UserTokenProvider =
-                    new DataProtectorTokenProvider<User>(dataProtectionProvider.Create("ASP.NET Identity"));
+                    new DataProtectorTokenProvider<User>(dataProtectionProvider.Create("ASP.NET Identity")) { TokenLifespan = TimeSpan.FromHours(3) };
             }
             return manager;
         }
