@@ -15,11 +15,19 @@ namespace Musicstore.Controllers {
         }
 
         public async Task<ActionResult> FindSong(string q) {
+            if(q == null) {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
             ViewBag.SearchString = q;
             return View(await db.Songs.Where(s => s.Name.Contains(q)).ToListAsync());
         }
 
         public async Task <ActionResult> FindCategory(string q) {
+            if(q == null) {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
             ViewBag.SearchCategory = q;
             return View(await db.Songs.Where(s => s.Genre.Contains(q)).ToListAsync());
         }
