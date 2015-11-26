@@ -50,8 +50,12 @@
 </table>
 
 <script>
-    $(document).ready(function () {
-        alert("Hello");
+    $(function () {
         $('#dtable').DataTable();
     });
 </script>
+
+@section scripts{
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/s/bs-3.3.5/dt-1.10.10,r-2.0.0/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/s/bs-3.3.5/dt-1.10.10,r-2.0.0/datatables.min.js"></script>
+}
