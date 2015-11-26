@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Musicstore</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/s/bs-3.3.5/jq-2.1.4,dt-1.10.10/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/s/bs-3.3.5/jq-2.1.4,dt-1.10.10/datatables.min.js"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link rel="icon" href="@Url.Content("~/Content/favicon.ico")" />
@@ -26,8 +28,10 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
                     @Html.Partial("_AdminPanelPartial")
                 </ul>
-                @Html.Partial("_LoginPartial")
-                @Html.Partial("_SearchPartial")
+                <ul>
+                    @Html.Partial("_LoginPartial")
+                    @Html.Partial("_SearchPartial")
+                </ul>
             </div>
         </div>
     </div>

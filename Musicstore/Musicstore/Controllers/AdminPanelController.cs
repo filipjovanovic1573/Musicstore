@@ -100,9 +100,8 @@ namespace Musicstore.Controllers {
             if(!ModelState.IsValid) {
                 return RedirectToAction("ListUsers", "AdminPanel");
             }
-
+            
             var user = UserManager.FindById(model.Id);
-
             if(user == null) {
                 return HttpNotFound();
             }
