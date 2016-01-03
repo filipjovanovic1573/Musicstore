@@ -110,6 +110,11 @@ footer {
         transition: all 0.5s;
     }
 
+    .text{
+        text-align: center !important;
+        max-height: 30px !important;
+    }
+
     .category .text {
         display: none;
         color: white;
@@ -160,4 +165,17 @@ dl > dt {
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"] {
     margin-left: unset !important;
+}
+
+#carousel-main > .carousel-indicators li {
+  background-color: #999 !important;
+  background-color: rgba(80,80,80,.55) !important;
+}
+
+#carousel-main > .carousel-indicators .active {
+  background-color: #444 !important; 
+}
+
+.padding-right-15{
+    padding-right: 15px;
 }
