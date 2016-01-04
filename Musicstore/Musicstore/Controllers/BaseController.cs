@@ -44,6 +44,8 @@ namespace Musicstore.Controllers {
 
         protected override void Dispose(bool disposing) {
             if(disposing) {
+                RoleManager.Dispose();
+                db.Dispose();
                 if(userManager != null) {
                     userManager.Dispose();
                     userManager = null;

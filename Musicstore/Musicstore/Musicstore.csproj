@@ -249,6 +249,8 @@
       <DependentUpon>201510091146422_RoleTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\CategoryEnum.cs" />
+    <Compile Include="Models\PerformerModel.cs" />
     <Compile Include="Models\SongModel.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1430,6 +1432,7 @@
     <Content Include="Scripts\kendo\2015.3.1111\kendo.angular2.min.js.map" />
     <Content Include="Scripts\kendo\2015.3.1111\kendo.angular.min.js.map" />
     <Content Include="Scripts\kendo\2015.3.1111\jquery.min.map" />
+    <Content Include="Views\AdminPanel\PublisherList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
