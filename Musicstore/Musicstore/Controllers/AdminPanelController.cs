@@ -146,13 +146,5 @@ namespace Musicstore.Controllers {
             db.SaveChanges();
             return RedirectToAction("ListUsers", "AdminPanel");
         }
-
-        public async Task<ActionResult> PublisherList() {
-            return View(await db.Publishers.ToListAsync());
-        } 
-
-        protected override void Dispose(bool disposing) {
-            base.Dispose(disposing);
-        }
     }
 }
