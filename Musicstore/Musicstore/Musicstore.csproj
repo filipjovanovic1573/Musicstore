@@ -264,7 +264,16 @@
     <Compile Include="Migrations\201510091146422_RoleTest.Designer.cs">
       <DependentUpon>201510091146422_RoleTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601042135373_AddedPerformer.cs" />
+    <Compile Include="Migrations\201601042135373_AddedPerformer.Designer.cs">
+      <DependentUpon>201601042135373_AddedPerformer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601042137099_AddedPerformer-Renamed.cs" />
+    <Compile Include="Migrations\201601042137099_AddedPerformer-Renamed.Designer.cs">
+      <DependentUpon>201601042137099_AddedPerformer-Renamed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\PerformerModel.cs" />
     <Compile Include="Models\SongModel.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1497,6 +1506,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510091146422_RoleTest.resx">
       <DependentUpon>201510091146422_RoleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601042135373_AddedPerformer.resx">
+      <DependentUpon>201601042135373_AddedPerformer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601042137099_AddedPerformer-Renamed.resx">
+      <DependentUpon>201601042137099_AddedPerformer-Renamed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -20,6 +20,5 @@ namespace Musicstore.Models {
         [Required]
         [Display(Name = "Address")]
         public string Address { get; set; }
-        public virtual List<Song> Songs { get; set; }
     }
 }
