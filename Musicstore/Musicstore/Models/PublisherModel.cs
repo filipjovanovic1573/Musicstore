@@ -20,5 +20,6 @@ namespace Musicstore.Models {
         [Required]
         [Display(Name = "Address")]
         public string Address { get; set; }
+        public string Thumbnail { get; set; }
     }
 }

@@ -212,67 +212,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201509261458484_AddedAccountNameToUserTable.cs" />
-    <Compile Include="Migrations\201509261458484_AddedAccountNameToUserTable.Designer.cs">
-      <DependentUpon>201509261458484_AddedAccountNameToUserTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509261550137_RemovedAccountNameFromUserTable.cs" />
-    <Compile Include="Migrations\201509261550137_RemovedAccountNameFromUserTable.Designer.cs">
-      <DependentUpon>201509261550137_RemovedAccountNameFromUserTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509261558528_RenamedTables.cs" />
-    <Compile Include="Migrations\201509261558528_RenamedTables.Designer.cs">
-      <DependentUpon>201509261558528_RenamedTables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509282250252_AddedPublisherTable.cs" />
-    <Compile Include="Migrations\201509282250252_AddedPublisherTable.Designer.cs">
-      <DependentUpon>201509282250252_AddedPublisherTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509282253048_RenamedPublisherTable.cs" />
-    <Compile Include="Migrations\201509282253048_RenamedPublisherTable.Designer.cs">
-      <DependentUpon>201509282253048_RenamedPublisherTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509282309383_AddedValidationToPublisher.cs" />
-    <Compile Include="Migrations\201509282309383_AddedValidationToPublisher.Designer.cs">
-      <DependentUpon>201509282309383_AddedValidationToPublisher.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509291144167_AddedSongTable.cs" />
-    <Compile Include="Migrations\201509291144167_AddedSongTable.Designer.cs">
-      <DependentUpon>201509291144167_AddedSongTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509291148100_RenamedSongTable.cs" />
-    <Compile Include="Migrations\201509291148100_RenamedSongTable.Designer.cs">
-      <DependentUpon>201509291148100_RenamedSongTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509291522151_AddedLinkFieldToSongTable.cs" />
-    <Compile Include="Migrations\201509291522151_AddedLinkFieldToSongTable.Designer.cs">
-      <DependentUpon>201509291522151_AddedLinkFieldToSongTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509291530204_AddedValidationToSongTable.cs" />
-    <Compile Include="Migrations\201509291530204_AddedValidationToSongTable.Designer.cs">
-      <DependentUpon>201509291530204_AddedValidationToSongTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510051159081_AddedSongTable1.cs" />
-    <Compile Include="Migrations\201510051159081_AddedSongTable1.Designer.cs">
-      <DependentUpon>201510051159081_AddedSongTable1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510051200143_AddedSongTable2.cs" />
-    <Compile Include="Migrations\201510051200143_AddedSongTable2.Designer.cs">
-      <DependentUpon>201510051200143_AddedSongTable2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510091146422_RoleTest.cs" />
-    <Compile Include="Migrations\201510091146422_RoleTest.Designer.cs">
-      <DependentUpon>201510091146422_RoleTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201601042135373_AddedPerformer.cs" />
-    <Compile Include="Migrations\201601042135373_AddedPerformer.Designer.cs">
-      <DependentUpon>201601042135373_AddedPerformer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201601042137099_AddedPerformer-Renamed.cs" />
-    <Compile Include="Migrations\201601042137099_AddedPerformer-Renamed.Designer.cs">
-      <DependentUpon>201601042137099_AddedPerformer-Renamed.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AlbumModel.cs" />
     <Compile Include="Models\PerformerModel.cs" />
     <Compile Include="Models\SongModel.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -1457,6 +1398,8 @@
     <Content Include="Scripts\kendo\2015.3.1111\kendo.angular2.min.js.map" />
     <Content Include="Scripts\kendo\2015.3.1111\kendo.angular.min.js.map" />
     <Content Include="Scripts\kendo\2015.3.1111\jquery.min.map" />
+    <Content Include="Views\Home\PartnerProgram.cshtml" />
+    <Content Include="Views\Home\PartnerList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1468,51 +1411,6 @@
   <ItemGroup>
     <Content Include="App_LocalResources\English.resx" />
     <Content Include="App_LocalResources\Serbian.resx" />
-    <EmbeddedResource Include="Migrations\201509261458484_AddedAccountNameToUserTable.resx">
-      <DependentUpon>201509261458484_AddedAccountNameToUserTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509261550137_RemovedAccountNameFromUserTable.resx">
-      <DependentUpon>201509261550137_RemovedAccountNameFromUserTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509261558528_RenamedTables.resx">
-      <DependentUpon>201509261558528_RenamedTables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509282250252_AddedPublisherTable.resx">
-      <DependentUpon>201509282250252_AddedPublisherTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509282253048_RenamedPublisherTable.resx">
-      <DependentUpon>201509282253048_RenamedPublisherTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509282309383_AddedValidationToPublisher.resx">
-      <DependentUpon>201509282309383_AddedValidationToPublisher.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509291144167_AddedSongTable.resx">
-      <DependentUpon>201509291144167_AddedSongTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509291148100_RenamedSongTable.resx">
-      <DependentUpon>201509291148100_RenamedSongTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509291522151_AddedLinkFieldToSongTable.resx">
-      <DependentUpon>201509291522151_AddedLinkFieldToSongTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509291530204_AddedValidationToSongTable.resx">
-      <DependentUpon>201509291530204_AddedValidationToSongTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510051159081_AddedSongTable1.resx">
-      <DependentUpon>201510051159081_AddedSongTable1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510051200143_AddedSongTable2.resx">
-      <DependentUpon>201510051200143_AddedSongTable2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510091146422_RoleTest.resx">
-      <DependentUpon>201510091146422_RoleTest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201601042135373_AddedPerformer.resx">
-      <DependentUpon>201601042135373_AddedPerformer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201601042137099_AddedPerformer-Renamed.resx">
-      <DependentUpon>201601042137099_AddedPerformer-Renamed.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

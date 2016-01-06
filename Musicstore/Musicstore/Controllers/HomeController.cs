@@ -29,5 +29,13 @@ namespace Musicstore.Controllers {
 
             return View();
         }
+
+        public ActionResult PartnerProgram() {
+            return View();
+        }
+
+        public ActionResult PartnerList() {
+            return View();
+        }
     }
 }
