@@ -817,7 +817,6 @@
     <Content Include="Content\kendo\2016.1.112\fonts\DejaVu\DejaVuSans-ExtraLight.ttf" />
     <Content Include="Content\kendo\2016.1.112\fonts\DejaVu\DejaVuSans-BoldOblique.ttf" />
     <Content Include="Content\kendo\2016.1.112\fonts\DejaVu\DejaVuSans-Bold.ttf" />
-    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
