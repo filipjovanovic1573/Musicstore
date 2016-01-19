@@ -45,6 +45,7 @@ namespace Musicstore.Models {
             modelBuilder.Entity<Performer>().ToTable("Performer");
             modelBuilder.Entity<Album>().ToTable("Album");
             modelBuilder.Entity<Category>().ToTable("Category");
+            modelBuilder.Entity<Partner>().ToTable("Partner");
         }
 
         public DbSet<Publisher> Publishers { get; set; }
@@ -52,5 +53,6 @@ namespace Musicstore.Models {
         public DbSet<Performer> Performers { get; set; }
         public DbSet<Album> Albums { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Partner> Partners { get; set; }
     }
 }

@@ -20,12 +20,21 @@ namespace Musicstore.Models {
         public DateTime? DateModified { get; set; }
         [ForeignKey("Album")]
         public string AlbumId { get; set; }
+        [Required]
         [ForeignKey("Category")]
         [Display(Name = "Category")]
         public string CategoryId { get; set; }
+        [Required]
+        [ForeignKey("Performer")]
+        [Display(Name = "Performer")]
+        public string PerformerId { get; set; }
+        public virtual Performer Performer { get; set; }
         public virtual Album Album { get; set; }
         public virtual Category Category { get; set; }
+
         [NotMapped]
         public IEnumerable<Category> Categories { get; set; }
+        [NotMapped]
+        public IEnumerable<Performer> Performers { get; set; }
     }
 }

@@ -3,8 +3,7 @@
     ViewBag.Title = "Home Page";
     int i = 0, j = 0, k = 0;
 }
-
-<div id="carousel-main" class="carousel slide" data-ride="carousel">
+<div id="carousel-main" class="carousel slide hidden-sm hidden-xs" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
         <li data-target="#carousel-main" data-slide-to="0" class="active"></li>
@@ -14,7 +13,6 @@
         <li data-target="#carousel-main" data-slide-to="4"></li>
         <li data-target="#carousel-main" data-slide-to="5"></li>
     </ol>
-
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
         <div class="item active">
@@ -41,12 +39,8 @@
 <div class="row">
     <h4 class="col-sm-3 col-md-3 col-xs-3">Categories</h4>
 </div>
-
 <div class="row">
     @foreach(var c in Model.Categories) {
-        if(i == 3) {
-            break;
-        }
         <div class="col-sm-4 col-md-4">
             <div class="category">
                 <a href="@Url.Action("FindCategory", "Search", new { q = c.Name})">
@@ -57,7 +51,6 @@
             </div>
             <br />
         </div>
-        i++;
     }
     <a href="@Url.Action("AllCategories", "Home")" class="pull-right padding-right-15"><h3>All categories</h3></a>
     <br />
@@ -68,9 +61,6 @@
 </div>
 <div class="row">
     @foreach(var c in Model.Performers) {
-        if(j == 3) {
-            break;
-        }
         <div class="col-sm-4 col-md-4">
             <div class="category">
                 <a href="@Url.Action("FindPerformer", "Search", new { q = c.Name})">
@@ -81,7 +71,6 @@
             </div>
             <br />
         </div>
-        j++;
     }
     <a href="@Url.Action("AllPerformers", "Home")" class="pull-right padding-right-15"><h3>All performers</h3></a>
     <br />
@@ -92,9 +81,6 @@
 </div>
 <div class="row">
     @foreach(var c in Model.Albums) {
-        if(k == 3) {
-            break;
-        }
         <div class="col-sm-4 col-md-4">
             <div class="category">
                 <a href="@Url.Action("FindAlbum", "Search", new { q = c.AlbumName})">
@@ -105,7 +91,6 @@
             </div>
             <br />
         </div>
-        k++;
     }
     <a href="@Url.Action("AllAlbums", "Home")" class="pull-right padding-right-15"><h3>All albums</h3></a>
     <br />

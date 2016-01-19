@@ -219,6 +219,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AlbumModel.cs" />
     <Compile Include="Models\CategoryModel.cs" />
+    <Compile Include="Models\PartnerModel.cs" />
     <Compile Include="Models\PerformerModel.cs" />
     <Compile Include="Models\SongModel.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -816,6 +817,7 @@
     <Content Include="Content\kendo\2016.1.112\fonts\DejaVu\DejaVuSans-ExtraLight.ttf" />
     <Content Include="Content\kendo\2016.1.112\fonts\DejaVu\DejaVuSans-BoldOblique.ttf" />
     <Content Include="Content\kendo\2016.1.112\fonts\DejaVu\DejaVuSans-Bold.ttf" />
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
@@ -1402,7 +1404,6 @@
     <Content Include="Views\Shared\_SearchPartial.cshtml" />
     <Content Include="Views\Search\FindSong.cshtml" />
     <Content Include="Views\Search\FindCategory.cshtml" />
-    <Content Include="Views\Home\PartnerProgram.cshtml" />
     <Content Include="Views\Home\PartnerList.cshtml" />
     <Content Include="Views\AdminPanel\ListPerformers.cshtml" />
     <Content Include="Views\AdminPanel\_ViewStart.cshtml" />
@@ -1486,6 +1487,9 @@
     <Content Include="Views\Home\SongDetails.cshtml" />
     <Content Include="Views\Home\AllPerformers.cshtml" />
     <Content Include="Views\Home\AllAlbums.cshtml" />
+    <Content Include="Views\AdminPanel\SongDetails.cshtml" />
+    <Content Include="Views\AdminPanel\ListPublishers.cshtml" />
+    <Content Include="Views\Home\PartnerProgram.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

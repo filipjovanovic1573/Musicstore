@@ -23,13 +23,22 @@ namespace Musicstore.Controllers {
             return View(await db.Songs.Where(s => s.Name.Contains(q)).ToListAsync());
         }
 
-        public async Task <ActionResult> FindCategory(string q) {
+        public async Task<ActionResult> FindCategory(string q) {
             if(q == null) {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
             ViewBag.SearchCategory = q;
             return View(await db.Songs.Include(s => s.Album).Where(s => s.Category.Name.Contains(q)).ToListAsync());
+        }
+
+        public async Task<ActionResult> FindPerformer(string q) {
+            if(q == null) {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            ViewBag.SearchCategory = q;
+            return View(await db.Songs.Include(s => s.Album).Where(s => s.Performer.Name.Contains(q)).ToListAsync());
         }
     }
 }

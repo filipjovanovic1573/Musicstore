@@ -41,7 +41,7 @@
                     @Html.DisplayFor(modelItem => item.Category.Name)
                 </td>
                 <td>
-                    <a href="@Html.DisplayFor(modelItem => item.Link)" download="@item.Name" target="_self" class="btn-sm btn-success"><i class="glyphicon glyphicon-download-alt"></i> Download</a>
+                    <a href="@Html.DisplayFor(modelItem => item.Link)" download="@item.Name" class="btn-sm btn-success"><i class="glyphicon glyphicon-download-alt"></i> Download</a>
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "EditSong", new { id = item.Id })

@@ -8,6 +8,7 @@ namespace Musicstore.Models {
     public class Performer {
         [Key]
         public string Id { get; set; }
+        [Required(ErrorMessage = "Name is required")]
         public string Name { get; set; }
         public string Thumbnail { get; set; }
         [Display(Name = "# of albums")]

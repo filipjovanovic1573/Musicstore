@@ -210,7 +210,7 @@ namespace Musicstore.Controllers {
                 await db.SaveChangesAsync();
                 return RedirectToAction("ListPerformers");
             }
-            return View("Error");
+            return View("Error"); 
         }
 
         public async Task<ActionResult> ListSongs() {
@@ -220,8 +220,10 @@ namespace Musicstore.Controllers {
         public async Task<ActionResult> AddSong() {
             var model = new Song();
             model.Categories = await Task.FromResult(db.Categories.ToList());
+            model.Performers = await Task.FromResult(db.Performers.ToList());
             return View(model);
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> AddSong(Song model, HttpPostedFileBase song) {
@@ -250,6 +252,13 @@ namespace Musicstore.Controllers {
             return View("Error");
         }
 
+        public async Task<ActionResult> SongDetails(string id) {
+            if(string.IsNullOrEmpty(id)) {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
+            return View(await db.Songs.Where(p => p.Id.Equals(id)).FirstOrDefaultAsync());
+        }
+        
         private TimeSpan SongLength(string path) {
             Mp3FileReader song = new Mp3FileReader(path);
             return song.TotalTime;
