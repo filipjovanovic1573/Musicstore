@@ -1,0 +1,18 @@
+﻿.body-content {
+    /*padding-left: 15px;*/
+    margin-top: 70px !important;
+}
+
+body {
+
+}
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+a{
+    text-decoration: none !important;
+}

@@ -10,6 +10,7 @@ namespace Musicstore.Models {
         [Key]
         public string Id { get; set; }
         [Required(ErrorMessage = "Album name is required")]
+        [DisplayFormat(NullDisplayText = "No album")]
         [Display(Name = "Album name")]
         public string AlbumName { get; set; }
         [Display(Name = "# Songs")]

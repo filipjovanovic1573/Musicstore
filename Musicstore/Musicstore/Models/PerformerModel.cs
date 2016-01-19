@@ -10,9 +10,11 @@ namespace Musicstore.Models {
         public string Id { get; set; }
         public string Name { get; set; }
         public string Thumbnail { get; set; }
+        [Display(Name = "# of albums")]
+        public int NumberOfAlbums { get; set; }
         public DateTime DateCreated { get; set; }
         [DisplayFormat(NullDisplayText = "No modifications")]
-        public DateTime DateModified { get; set; }
+        public DateTime? DateModified { get; set; }
 
     }
 }

@@ -8,19 +8,24 @@ using System.Web;
 namespace Musicstore.Models {
     public class Song {
         public string Id { get; set; }
-        [Required]
         [Display(Name = "Title")]
         public string Name { get; set; }
-        [Required]
         public string Length { get; set; }
-        [Required]
-        [Display(Name = "Genre")]
-        public string Genre { get; set; }
         public string Thumbnail { get; set; }
-        [Required]
         public string Link { get; set; }
+        [Display(Name = "Date created")]
+        public DateTime DateCreated { get; set; }
+        [Display(Name = "Date modified")]
+        [DisplayFormat(NullDisplayText = "No modifications")]
+        public DateTime? DateModified { get; set; }
         [ForeignKey("Album")]
         public string AlbumId { get; set; }
+        [ForeignKey("Category")]
+        [Display(Name = "Category")]
+        public string CategoryId { get; set; }
         public virtual Album Album { get; set; }
+        public virtual Category Category { get; set; }
+        [NotMapped]
+        public IEnumerable<Category> Categories { get; set; }
     }
 }

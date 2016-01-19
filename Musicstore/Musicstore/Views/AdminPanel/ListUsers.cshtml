@@ -40,9 +40,9 @@
                     @Html.DisplayFor(modelItem => item.LockoutEndDateUtc)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "EditUser", new { id = item.Id }, new { @class = "btn-sm btn-warning" })
-                    @Html.ActionLink("Details", "UserDetails", new { id = item.Id }, new { @class = "btn-sm btn-info" })
-                    @Html.ActionLink("Delete", "DeleteUser", new { id = item.Id }, new { @class = "btn-sm btn-danger" })
+                    <a href="@Url.Action("EditUser", new { id = item.Id })" class="btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i> Edit</a>
+                    <a href="@Url.Action("UserDetails", new { id = item.Id })" class="btn-sm btn-info"><i class="glyphicon glyphicon-list"></i> Details</a>
+                    <a href="@Url.Action("DeleteUser", new { id = item.Id })" class="btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i> Delete</a>
                 </td>
             </tr>
         }

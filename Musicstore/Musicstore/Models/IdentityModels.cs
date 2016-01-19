@@ -43,10 +43,14 @@ namespace Musicstore.Models {
             modelBuilder.Entity<Publisher>().ToTable("Publisher");
             modelBuilder.Entity<Song>().ToTable("Song");
             modelBuilder.Entity<Performer>().ToTable("Performer");
+            modelBuilder.Entity<Album>().ToTable("Album");
+            modelBuilder.Entity<Category>().ToTable("Category");
         }
 
         public DbSet<Publisher> Publishers { get; set; }
         public DbSet<Song> Songs { get; set; }
         public DbSet<Performer> Performers { get; set; }
+        public DbSet<Album> Albums { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

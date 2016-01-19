@@ -21,5 +21,10 @@ namespace Musicstore.Models {
         [Display(Name = "Address")]
         public string Address { get; set; }
         public string Thumbnail { get; set; }
+        [Display(Name = "Date created")]
+        public DateTime DateCreated { get; set; }
+        [Display(Name = "Date modified")]
+        [DisplayFormat(NullDisplayText = "No modifications")]
+        public DateTime DateModified { get; set; }
     }
 }

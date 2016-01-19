@@ -31,7 +31,7 @@ namespace Musicstore {
             smtp.EnableSsl = false;
 
             var to = new MailAddress(message.Destination);
-            var from = new MailAddress("fil.93@hotmail.com", "Support");
+            var from = new MailAddress("fil.93@hotmail.com", "support@musicstore.com");
 
             var msg = new MailMessage();
 

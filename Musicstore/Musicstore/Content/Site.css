@@ -7,6 +7,7 @@
 /* Set padding to keep content from hitting the edges */
 .body-content {
     /*padding-left: 15px;*/
+    margin-top: 70px !important;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -110,33 +111,33 @@ footer {
         transition: all 0.5s;
     }
 
-    .text{
-        text-align: center !important;
-        max-height: 30px !important;
-    }
+.text {
+    text-align: center !important;
+    max-height: 30px !important;
+}
 
-    .category .text {
-        display: none;
-        color: white;
-        -moz-transition: all 0.5s;
-        -webkit-transition: all 0.5s;
-        transition: all 0.5s;
-    }
+.category .text {
+    display: none;
+    color: white;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
 
-    .category:hover span {
-        position: absolute;
-        opacity: 1;
-    }
+.category:hover span {
+    position: absolute;
+    opacity: 1;
+}
 
-    .category:hover .text {
-        display: block;
-        position: absolute;
-        background: none;
-        font-size: xx-large;
-        top: 45%;
-        text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
-        opacity: 1;
-    }
+.category:hover .text {
+    display: block;
+    position: absolute;
+    background: none;
+    font-size: xx-large;
+    top: 45%;
+    text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
+    opacity: 1;
+}
 
 
 .table > thead > tr > th,
@@ -168,14 +169,26 @@ dl > dt {
 }
 
 #carousel-main > .carousel-indicators li {
-  background-color: #999 !important;
-  background-color: rgba(80,80,80,.55) !important;
+    background-color: #999 !important;
+    background-color: rgba(80,80,80,.55) !important;
 }
 
 #carousel-main > .carousel-indicators .active {
-  background-color: #444 !important; 
+    background-color: #444 !important;
 }
 
-.padding-right-15{
+.padding-right-15 {
     padding-right: 15px;
+}
+
+.text-small{
+    font-size:medium !important;
+}
+
+.text-green{
+    color: green;
+}
+
+.center{
+    text-align:center !important;
 }

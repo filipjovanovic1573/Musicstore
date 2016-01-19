@@ -1,6 +1,7 @@
-﻿@using Musicstore.ViewModels;
+﻿@model Musicstore.ViewModels.HomeViewModel
 @{
     ViewBag.Title = "Home Page";
+    int i = 0, j = 0, k = 0;
 }
 
 <div id="carousel-main" class="carousel slide" data-ride="carousel">
@@ -42,18 +43,70 @@
 </div>
 
 <div class="row">
-    @foreach(CategoryViewModel c in ViewBag.Categories) {
+    @foreach(var c in Model.Categories) {
+        if(i == 3) {
+            break;
+        }
         <div class="col-sm-4 col-md-4">
             <div class="category">
                 <a href="@Url.Action("FindCategory", "Search", new { q = c.Name})">
                     <span></span>
                     <span class="text">@c.Name</span>
-                    <img class="img-responsive" src="@c.ImageLink" />
+                    <img class="img-responsive" src="@c.Image" />
                 </a>
             </div>
             <br />
         </div>
+        i++;
     }
-    <a href="#" class="pull-right padding-right-15"><h2>All categories</h2></a>
+    <a href="@Url.Action("AllCategories", "Home")" class="pull-right padding-right-15"><h3>All categories</h3></a>
+    <br />
+</div>
+<br />
+<div class="row">
+    <h4 class="col-sm-3 col-md-3 col-xs-3">Latest performers</h4>
+</div>
+<div class="row">
+    @foreach(var c in Model.Performers) {
+        if(j == 3) {
+            break;
+        }
+        <div class="col-sm-4 col-md-4">
+            <div class="category">
+                <a href="@Url.Action("FindPerformer", "Search", new { q = c.Name})">
+                    <span></span>
+                    <span class="text">@c.Name</span>
+                    <img class="img-responsive" src="@c.Thumbnail" />
+                </a>
+            </div>
+            <br />
+        </div>
+        j++;
+    }
+    <a href="@Url.Action("AllPerformers", "Home")" class="pull-right padding-right-15"><h3>All performers</h3></a>
+    <br />
+</div>
+<br />
+<div class="row">
+    <h4 class="col-sm-3 col-md-3 col-xs-3">Latest albums</h4>
+</div>
+<div class="row">
+    @foreach(var c in Model.Albums) {
+        if(k == 3) {
+            break;
+        }
+        <div class="col-sm-4 col-md-4">
+            <div class="category">
+                <a href="@Url.Action("FindAlbum", "Search", new { q = c.AlbumName})">
+                    <span></span>
+                    <span class="text">@c.AlbumName</span>
+                    <img class="img-responsive" src="@c.Thumbnail" />
+                </a>
+            </div>
+            <br />
+        </div>
+        k++;
+    }
+    <a href="@Url.Action("AllAlbums", "Home")" class="pull-right padding-right-15"><h3>All albums</h3></a>
     <br />
 </div>

@@ -29,7 +29,7 @@ namespace Musicstore.Controllers {
             }
 
             ViewBag.SearchCategory = q;
-            return View(await db.Songs.Where(s => s.Genre.Contains(q)).ToListAsync());
+            return View(await db.Songs.Include(s => s.Album).Where(s => s.Category.Name.Contains(q)).ToListAsync());
         }
     }
 }

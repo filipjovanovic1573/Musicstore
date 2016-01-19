@@ -5,8 +5,6 @@
     string defRole = ViewBag.DefaultRole;
 }
 
-<h4>Edit user @Html.DisplayFor(model => model.UserName)</h4>
-
 @using(Html.BeginForm("EditUser", "AdminPanel", FormMethod.Post, new { @class = "form-horizontal" })) {
     @Html.AntiForgeryToken()
 

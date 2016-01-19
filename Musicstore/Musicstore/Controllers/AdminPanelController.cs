@@ -11,6 +11,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Musicstore.ViewModels;
 using System.Net;
+using System.Web.Helpers;
+using System.IO;
+using NAudio.Wave;
 
 namespace Musicstore.Controllers {
     [Authorize(Roles = "Admin")]
@@ -145,6 +148,122 @@ namespace Musicstore.Controllers {
             UserManager.Delete(user);
             db.SaveChanges();
             return RedirectToAction("ListUsers", "AdminPanel");
+        }
+
+        public async Task<ActionResult> ListPublishers() {
+            return View(await db.Publishers.ToListAsync());
+        }
+
+        public async Task<ActionResult> ListPerformers() {
+            return View(await Task.FromResult(db.Performers.ToList()));
+        } 
+
+        public ActionResult AddPerformer() {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> AddPerformer(Performer model) {
+            model.Id = Guid.NewGuid().ToString();
+            model.DateCreated = DateTime.Now;
+            var img = WebImage.GetImageFromRequest("file");
+            if(img != null) {
+                string imgPath = @"~/Content/Image/PerformerImages/" + model.Id + "_" + Path.GetFileName(img.FileName);
+                img.Save(imgPath);
+                model.Thumbnail = imgPath.Replace("~", "");
+            }
+            if(ModelState.IsValid) {
+                db.Performers.Add(model);
+                await db.SaveChangesAsync();
+                return RedirectToAction("ListPerformers");
+            }
+            return View("Error");
+        }
+
+        public async Task<ActionResult> PerformerDetails(string id) {
+            if(string.IsNullOrEmpty(id)) {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
+            return View(await db.Performers.Where(p => p.Id.Equals(id)).FirstOrDefaultAsync());
+        }
+
+        public async Task<ActionResult> EditPerformer(string id) {
+            if(string.IsNullOrEmpty(id)) {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
+            return View(await db.Performers.Where(p => p.Id.Equals(id)).FirstOrDefaultAsync());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> EditPerformer(Performer model) {
+            model.DateModified = DateTime.Now;
+            var img = WebImage.GetImageFromRequest("file");
+            if(img != null) {
+                string imgPath = @"~/Content/Image/PerformerImages/" + model.Id + "_" + Path.GetFileName(img.FileName);
+                img.Save(imgPath);
+                model.Thumbnail = imgPath.Replace("~", "");
+            }
+            if(ModelState.IsValid) {
+                db.Entry(model).State = EntityState.Modified;
+                await db.SaveChangesAsync();
+                return RedirectToAction("ListPerformers");
+            }
+            return View("Error");
+        }
+
+        public async Task<ActionResult> ListSongs() {
+            return View(await Task.FromResult(db.Songs.Include(s => s.Album).ToList()));
+        }
+
+        public async Task<ActionResult> AddSong() {
+            var model = new Song();
+            model.Categories = await Task.FromResult(db.Categories.ToList());
+            return View(model);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> AddSong(Song model, HttpPostedFileBase song) {
+            model.Id = Guid.NewGuid().ToString();
+            model.DateCreated = DateTime.Now;
+            var img = WebImage.GetImageFromRequest("file");
+            if(img != null) {
+                string imgPath = @"~/Content/Image/SongImages/" + model.Id + "_" + Path.GetFileName(img.FileName);
+                await Task.FromResult(img.Save(imgPath));
+                model.Thumbnail = imgPath.Replace("~", "");
+            }
+            else {
+                model.Thumbnail = @"/Content/Image/SongImages/song_default.png";
+            }
+
+            model.Link = @"/Content/UploadedSongs/" + model.Id + "_" + Path.GetFileName(song.FileName);
+            model.Name = song.FileName;
+
+            if(ModelState.IsValid) {
+                song.SaveAs(Path.Combine(Server.MapPath("~/Content/UploadedSongs"), model.Id + "_" + Path.GetFileName(song.FileName)));
+                model.Length = SongLength(Path.Combine(Server.MapPath("~/Content/UploadedSongs"), model.Id + "_" + Path.GetFileName(song.FileName))).ToString(@"mm\:ss");
+                db.Songs.Add(model);
+                await db.SaveChangesAsync();
+                return RedirectToAction("ListSongs");
+            }
+            return View("Error");
+        }
+
+        private TimeSpan SongLength(string path) {
+            Mp3FileReader song = new Mp3FileReader(path);
+            return song.TotalTime;
+        }
+        [ChildActionOnly]
+        public FileResult Download(string path, string name) {
+            return File(path, System.Net.Mime.MediaTypeNames.Application.Octet, name);
+        }
+
+        protected override void Dispose(bool disposing) {
+            if(disposing) {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }

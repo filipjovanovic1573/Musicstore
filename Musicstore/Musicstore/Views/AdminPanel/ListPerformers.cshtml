@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Musicstore.Models.Performer>
+
+@{
+    ViewBag.Title = "List of Performers";
+}
+
+<table class="table" id="dtable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfAlbums)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateModified)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOfAlbums)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateCreated)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateModified)
+                </td>
+                <td>
+                    <a href="@Url.Action("EditPerformer", new { id = item.Id })" class="btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i> Edit</a>
+                    <a href="@Url.Action("PerformerDetails", new { id = item.Id })" class="btn-sm btn-info"><i class="glyphicon glyphicon-list"></i> Details</a>
+                    <a href="@Url.Action("DeletePerformer", new { id = item.Id })" class="btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i> Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function () {
+        $('#dtable').DataTable();
+    });
+</script>
+
+@section scripts{
+    <link href="~/content/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <script src="~/scripts/datatables/jquery.datatables.min.js"></script>
+    <script src="~/scripts/datatables/datatables.bootstrap.min.js"></script>
+    <script src="~/scripts/datatables/datatables.responsive.min.js"></script>
+}

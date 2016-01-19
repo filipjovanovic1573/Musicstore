@@ -1,21 +1,21 @@
 ﻿using Musicstore.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
 namespace Musicstore.Controllers {
     public class HomeController : BaseController {
-        public ActionResult Index() {
-            CategoryViewModel[] c = { new CategoryViewModel() { Name = "Rock", ImageLink = "http://i.imgur.com/XO3DZVV.jpg" },
-                                      new CategoryViewModel() { Name = "Hip-Hop", ImageLink = "http://i.imgur.com/RYaSSs2.jpg"},
-                                      new CategoryViewModel() { Name = "Pop", ImageLink = "http://i.imgur.com/kvEyari.jpg" },
-                                      new CategoryViewModel() { Name = "Dubstep", ImageLink = "http://i.imgur.com/28jeHKi.jpg" },
-                                      new CategoryViewModel() { Name = "House", ImageLink = "http://i.imgur.com/SfE206z.jpg" },
-                                      new CategoryViewModel() { Name = "Jazz", ImageLink = "http://i.imgur.com/EWVevBD.jpg" } };
-            ViewBag.Categories = c;
-            return View();
+        public async Task<ActionResult> Index() {
+            var model = new HomeViewModel();
+            model.Categories = await Task.FromResult(db.Categories.ToList());
+            model.Performers = await Task.FromResult(db.Performers.ToList());
+            model.Albums = await Task.FromResult(db.Albums.ToList());
+            return View(model);
         }
 
         public ActionResult About() {
@@ -37,5 +37,30 @@ namespace Musicstore.Controllers {
         public ActionResult PartnerList() {
             return View();
         }
+
+        public async Task<ActionResult> AllCategories() {
+            return View(await Task.FromResult(db.Categories.ToList()));
+        }
+        public async Task<ActionResult> AllPerformers() {
+            return View(await Task.FromResult(db.Performers.ToList()));
+        }
+        public async Task<ActionResult> AllAlbums() {
+            return View(await Task.FromResult(db.Albums.ToList()));
+        }
+
+        public async Task<ActionResult> SongDetails(string id) {
+            if(string.IsNullOrEmpty(id)) {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
+            return View(await db.Songs.Where(p => p.Id.Equals(id)).FirstOrDefaultAsync());
+        }
+
+        protected override void Dispose(bool disposing) {
+            if(disposing) {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
     }
 }
