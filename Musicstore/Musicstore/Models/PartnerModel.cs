@@ -14,6 +14,7 @@ namespace Musicstore.Models {
         public string Phone { get; set; }
         public bool Approved { get; set; }
         public DateTime DateCreated { get; set; }
+        [DisplayFormat(NullDisplayText = "No modifications")]
         public DateTime? DateModified { get; set; }
     }
 }

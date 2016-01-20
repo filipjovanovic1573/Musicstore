@@ -14,6 +14,7 @@ using System.Net;
 using System.Web.Helpers;
 using System.IO;
 using NAudio.Wave;
+using System.Net.Mail;
 
 namespace Musicstore.Controllers {
     [Authorize(Roles = "Admin")]
@@ -72,7 +73,7 @@ namespace Musicstore.Controllers {
             };
             return View(detailsUser);
         }
-        
+
         public ActionResult EditUser(string id) {
             if(id == null) {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -103,12 +104,12 @@ namespace Musicstore.Controllers {
             if(!ModelState.IsValid) {
                 return RedirectToAction("ListUsers", "AdminPanel");
             }
-            
+
             var user = UserManager.FindById(model.Id);
             if(user == null) {
                 return HttpNotFound();
             }
-            
+
             user.UserName = model.UserName;
             user.Email = model.Email;
             user.PhoneNumber = model.PhoneNumber;
@@ -156,7 +157,7 @@ namespace Musicstore.Controllers {
 
         public async Task<ActionResult> ListPerformers() {
             return View(await Task.FromResult(db.Performers.ToList()));
-        } 
+        }
 
         public ActionResult AddPerformer() {
             return View();
@@ -210,7 +211,7 @@ namespace Musicstore.Controllers {
                 await db.SaveChangesAsync();
                 return RedirectToAction("ListPerformers");
             }
-            return View("Error"); 
+            return View("Error");
         }
 
         public async Task<ActionResult> ListSongs() {
@@ -252,20 +253,77 @@ namespace Musicstore.Controllers {
             return View("Error");
         }
 
+        public async Task<ActionResult> ListPartners() {
+            return View(await db.Partners.ToListAsync());
+        }
+
         public async Task<ActionResult> SongDetails(string id) {
             if(string.IsNullOrEmpty(id)) {
                 return new HttpStatusCodeResult(HttpStatusCode.NotFound);
             }
             return View(await db.Songs.Where(p => p.Id.Equals(id)).FirstOrDefaultAsync());
         }
-        
+
         private TimeSpan SongLength(string path) {
             Mp3FileReader song = new Mp3FileReader(path);
             return song.TotalTime;
         }
+
         [ChildActionOnly]
         public FileResult Download(string path, string name) {
             return File(path, System.Net.Mime.MediaTypeNames.Application.Octet, name);
+        }
+
+        [HttpPost]
+        public ActionResult Approve(string id) {
+            var model = db.Partners.Where(p => p.Id.Equals(id)).FirstOrDefault();
+            if(model.Approved == false) {
+                model.Approved = true;
+            }
+            model.DateModified = DateTime.Now;
+            db.Entry(model).State = EntityState.Modified;
+            int r = db.SaveChanges();
+            if(r == 1) {
+                SendEmail("Aww yisss", "You've been accepted in our partner program. Congrats!!!", model.Email);
+            }
+            return RedirectToAction("ListPartners");
+        }
+
+        public ActionResult Disapprove(string id) {
+            var model = db.Partners.Where(p => p.Id.Equals(id)).FirstOrDefault();
+            if(model.Approved == true) {
+                model.Approved = false;
+            }
+            model.DateModified = DateTime.Now;
+            db.Entry(model).State = EntityState.Modified;
+            int r = db.SaveChanges();
+            if(r == 1) {
+                SendEmail("Bad news", "You've been removed from our partner program. It's a sad day...", model.Email);
+            }
+            return RedirectToAction("ListPartners");
+        }
+
+        private void SendEmail(string subject, string text, string destination) {
+            int port = int.Parse(Properties.Resources.smtpPort);
+
+            var smtp = new SmtpClient(Properties.Resources.sendgridSmtp, port);
+
+            var credentials = new NetworkCredential(Properties.Resources.mailAccount, Properties.Resources.mailPassword);
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = credentials;
+            smtp.EnableSsl = false;
+
+            var to = new MailAddress(destination);
+            var from = new MailAddress("fil.93@hotmail.com", "support@musicstore.com");
+
+            var msg = new MailMessage();
+
+            msg.To.Add(to);
+            msg.From = from;
+            msg.IsBodyHtml = true;
+            msg.Subject = subject;
+            msg.Body = text;
+            smtp.Send(msg);
         }
 
         protected override void Dispose(bool disposing) {

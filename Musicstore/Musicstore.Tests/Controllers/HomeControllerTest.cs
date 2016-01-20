@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Musicstore;
 using Musicstore.Controllers;
+using System.Threading.Tasks;
 
 namespace Musicstore.Tests.Controllers {
     [TestClass]
@@ -16,7 +17,7 @@ namespace Musicstore.Tests.Controllers {
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.Index() as ViewResult;
+            ViewResult result = controller.Index().Result as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);

@@ -1,4 +1,5 @@
-﻿using Musicstore.ViewModels;
+﻿using Musicstore.Models;
+using Musicstore.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -32,6 +33,20 @@ namespace Musicstore.Controllers {
 
         public ActionResult PartnerProgram() {
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> PartnerProgram(Partner model) {
+            model.DateCreated = DateTime.Now;
+            model.Approved = false;
+            model.Id = Guid.NewGuid().ToString();
+            if(ModelState.IsValid) {
+                db.Partners.Add(model);
+                await db.SaveChangesAsync();
+                return RedirectToAction("Index");
+            }
+            return View("Error");
         }
 
         public ActionResult PartnerList() {
