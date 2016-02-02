@@ -14,7 +14,8 @@ namespace Musicstore.Models {
             // Add custom user claims here
             return userIdentity;
         }
-        
+
+        public bool IsActive { get; set; }
         //public string AccountName { get; set; }
     }
 
@@ -46,6 +47,7 @@ namespace Musicstore.Models {
             modelBuilder.Entity<Album>().ToTable("Album");
             modelBuilder.Entity<Category>().ToTable("Category");
             modelBuilder.Entity<Partner>().ToTable("Partner");
+            modelBuilder.Entity<Api>().ToTable("Api");
         }
 
         public DbSet<Publisher> Publishers { get; set; }
@@ -54,5 +56,6 @@ namespace Musicstore.Models {
         public DbSet<Album> Albums { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Partner> Partners { get; set; }
+        public DbSet<Api> Api { get; set; }
     }
 }

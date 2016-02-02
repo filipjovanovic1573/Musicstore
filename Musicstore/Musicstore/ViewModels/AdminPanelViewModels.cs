@@ -38,5 +38,6 @@ namespace Musicstore.ViewModels {
         public string PhoneNumber { get; set; }
         [Display(Name = "Roles")]
         public IEnumerable<SelectListItem> Roles { get; set; }
+        public bool IsActive { get; set; }
     }
 }

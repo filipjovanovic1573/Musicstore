@@ -26,6 +26,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.DateModified)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -51,8 +54,11 @@
                     @Html.DisplayFor(modelItem => item.DateModified)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id })
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+                <td>
+                    <a href="@Url.Action("EditPublisher", new { id = item.Id })" class="btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i> Edit</a>
+                    <a href="@Url.Action("PublisherDetails", new { id = item.Id })" class="btn-sm btn-info"><i class="glyphicon glyphicon-list"></i> Details</a>
                 </td>
             </tr>
         }

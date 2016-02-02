@@ -18,19 +18,30 @@ namespace Musicstore.Models {
         public string Thumbnail { get; set; }
         [Required(ErrorMessage = "Year of production is required")]
         [Display(Name = "Year of production")]
-        public DateTime Year { get; set; }
+        [DisplayFormat(DataFormatString = "{0:d}", ApplyFormatInEditMode = true)]
+        public DateTime? Year { get; set; }
         [Display(Name = "Date created")]
         public DateTime DateCreated { get; set; }
         [Display(Name = "Date modified")]
         [DisplayFormat(NullDisplayText = "No modifications")]
-        public DateTime DateModified { get; set; }
+        public DateTime? DateModified { get; set; }
         [ForeignKey("Publisher")]
+        [Display(Name = "Publisher")]
         public string PublisherId { get; set; }
         public virtual Publisher Publisher { get; set; }
         [ForeignKey("Performer")]
+        [Display(Name = "Performer")]
         public string PerformerId { get; set; }
         public virtual Performer Performer { get; set; }
         public virtual IEnumerable<Song> Songs { get; set; }
+        [Display(Name = "Active")]
+        public bool IsActive { get; set; }
 
+        [NotMapped]
+        public IEnumerable<Song> SongsSL { get; set; }
+        [NotMapped]
+        public IEnumerable<Performer> Performers { get; set; }
+        [NotMapped]
+        public IEnumerable<Publisher> Publishers { get; set; }
     }
 }

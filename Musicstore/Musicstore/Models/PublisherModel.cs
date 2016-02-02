@@ -25,6 +25,8 @@ namespace Musicstore.Models {
         public DateTime DateCreated { get; set; }
         [Display(Name = "Date modified")]
         [DisplayFormat(NullDisplayText = "No modifications")]
-        public DateTime DateModified { get; set; }
+        public DateTime? DateModified { get; set; }
+        [Display(Name = "Active")]
+        public bool IsActive { get; set; }
     }
 }

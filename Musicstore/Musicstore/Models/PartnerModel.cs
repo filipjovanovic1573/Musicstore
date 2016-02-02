@@ -13,7 +13,9 @@ namespace Musicstore.Models {
         public string Address { get; set; }
         public string Phone { get; set; }
         public bool Approved { get; set; }
+        [Display(Name = "Date created")]
         public DateTime DateCreated { get; set; }
+        [Display(Name = "Date modified")]
         [DisplayFormat(NullDisplayText = "No modifications")]
         public DateTime? DateModified { get; set; }
     }

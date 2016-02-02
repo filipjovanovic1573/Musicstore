@@ -13,9 +13,13 @@ namespace Musicstore.Models {
         public string Thumbnail { get; set; }
         [Display(Name = "# of albums")]
         public int NumberOfAlbums { get; set; }
+        [Display(Name = "Date created")]
         public DateTime DateCreated { get; set; }
+        [Display(Name = "Date modified")]
         [DisplayFormat(NullDisplayText = "No modifications")]
         public DateTime? DateModified { get; set; }
+        [Display(Name = "Active")]
+        public bool IsActive { get; set; }
 
     }
 }

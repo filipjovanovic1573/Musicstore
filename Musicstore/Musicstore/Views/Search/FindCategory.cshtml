@@ -1,49 +1,68 @@
 ﻿@model IEnumerable<Musicstore.Models.Song>
-
 @{
     ViewBag.Title = "FingCategory";
 }
-
-<h2>Result for @ViewBag.SearchCategory</h2>
-
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Album.AlbumName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Length)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Category.Name)
-        </th>
-        <th>
-
-        </th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Album.AlbumName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Length)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category.Name)
-        </td>
-        <td>
-            <a href="@Html.DisplayFor(modelItem => item.Link)" class="btn-sm btn-success" download><i class="glyphicon glyphicon-download-alt"></i> Download</a>
-            <a href="@Url.Action("SongDetails", "Home", new { id = item.Id })" class="btn-sm btn-info"><i class="glyphicon glyphicon-list"></i> Details</a>
-        </td>
-    </tr>
-}
-
+<h4>Result for <span class="text-green"><strong>@ViewBag.SearchCategory</strong></span></h4>
+<table class="table" id="dtable">
+    <thead>
+        <tr>
+            <th class="hidden-xs">
+                @Html.DisplayNameFor(model => model.Album.AlbumName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th class="hidden-xs hidden-sm">
+                @Html.DisplayNameFor(model => model.Length)
+            </th>
+            <th class="hidden-xs hidden-sm">
+                @Html.DisplayNameFor(model => model.Category.Name)
+            </th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model) {
+            <tr>
+                <td class="hidden-xs">
+                    @Html.ActionLink(@item.Album.AlbumName, "FindAlbum", new { album = item.Album.AlbumName })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td class="hidden-xs hidden-sm">
+                    @Html.DisplayFor(modelItem => item.Length)
+                </td>
+                <td class="hidden-xs hidden-sm">
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                </td>
+                <td width="200px">
+                    <a href="@Html.DisplayFor(modelItem => item.Link)" class="btn-sm btn-success" download><i class="glyphicon glyphicon-download-alt"></i> Download</a>
+                    <a href="@Url.Action("SongDetails", "Home", new { id = item.Id })" class="btn-sm btn-info"><i class="glyphicon glyphicon-list"></i> Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
+
+<script>
+    $(document).ready(function () {
+        $('#dtable').DataTable({
+            "aoColumnDefs": [{
+                'bSortable': false,
+                'aTargets': [-1]
+            }],
+            "language": {
+                'search': 'Search results'
+            }
+        });
+    });
+</script>
+
+@section scripts{
+    <link href="~/content/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <script src="~/scripts/datatables/jquery.datatables.min.js"></script>
+    <script src="~/scripts/datatables/datatables.bootstrap.min.js"></script>
+    <script src="~/scripts/datatables/datatables.responsive.min.js"></script>
+}

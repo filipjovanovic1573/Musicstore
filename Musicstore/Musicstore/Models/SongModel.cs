@@ -31,6 +31,8 @@ namespace Musicstore.Models {
         public virtual Performer Performer { get; set; }
         public virtual Album Album { get; set; }
         public virtual Category Category { get; set; }
+        [Display(Name = "Active")]
+        public bool IsActive { get; set; }
 
         [NotMapped]
         public IEnumerable<Category> Categories { get; set; }

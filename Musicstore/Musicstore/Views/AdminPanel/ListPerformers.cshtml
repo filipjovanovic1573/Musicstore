@@ -19,6 +19,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.DateModified)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -38,10 +41,12 @@
                     @Html.DisplayFor(modelItem => item.DateModified)
                 </td>
                 <td>
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+                <td>
                     <a href="@Url.Action("EditPerformer", new { id = item.Id })" class="btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i> Edit</a>
                     <a href="@Url.Action("PerformerDetails", new { id = item.Id })" class="btn-sm btn-info"><i class="glyphicon glyphicon-list"></i> Details</a>
-                    <a href="@Url.Action("DeletePerformer", new { id = item.Id })" class="btn-sm btn-danger"><i class="glyphicon glyphicon-trash"></i> Delete</a>
-                </td>
+                  </td>
             </tr>
         }
     </tbody>

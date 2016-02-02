@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<Musicstore.Models.Category>
 
 @{
-    ViewBag.Title = "All categories";
+    ViewBag.Title = "Categories";
 }
 <div class="row">
     @foreach(var c in Model) {
         <div class="col-sm-2 col-md-2">
             <div class="category">
-                <a href="@Url.Action("FindCategory", "Search", new { q = c.Name})">
+                <a href="@Url.Action("FindCategory", "Search", new { category = c.Name})">
                     <span></span>
                     <span class="text text-small">@c.Name</span>
                     <img class="img-responsive" src="@c.Image" />

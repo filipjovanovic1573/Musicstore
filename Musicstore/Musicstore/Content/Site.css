@@ -139,6 +139,28 @@ footer {
     opacity: 1;
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 1100px) {
+    .category span {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        opacity: 1;
+        background: rgba(0,0,0,.5);
+        -moz-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    .category .text {
+        display: block;
+        color: white;
+        font-size: large !important;
+        -moz-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+}
 
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -181,14 +203,14 @@ dl > dt {
     padding-right: 15px;
 }
 
-.text-small{
-    font-size:medium !important;
+.text-small {
+    font-size: medium !important;
 }
 
-.text-green{
+.text-green {
     color: green;
 }
 
-.center{
-    text-align:center !important;
+.center {
+    text-align: center !important;
 }

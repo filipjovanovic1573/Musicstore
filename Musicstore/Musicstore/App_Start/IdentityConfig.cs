@@ -11,7 +11,6 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using Musicstore.Models;
-using SendGrid;
 using System.Net;
 using System.Configuration;
 using System.Web.Services.Description;

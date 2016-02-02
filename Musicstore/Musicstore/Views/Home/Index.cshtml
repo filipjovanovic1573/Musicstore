@@ -1,7 +1,6 @@
 ﻿@model Musicstore.ViewModels.HomeViewModel
 @{
     ViewBag.Title = "Home Page";
-    int i = 0, j = 0, k = 0;
 }
 <div id="carousel-main" class="carousel slide hidden-sm hidden-xs" data-ride="carousel">
     <!-- Indicators -->
@@ -41,7 +40,7 @@
 </div>
 <div class="row">
     @foreach(var c in Model.Categories) {
-        <div class="col-sm-4 col-md-4">
+        <div class="col-sx-6 col-sm-4 col-md-4">
             <div class="category">
                 <a href="@Url.Action("FindCategory", "Search", new { q = c.Name})">
                     <span></span>
@@ -61,9 +60,9 @@
 </div>
 <div class="row">
     @foreach(var c in Model.Performers) {
-        <div class="col-sm-4 col-md-4">
+        <div class="col-sx-6 col-sm-4 col-md-4">
             <div class="category">
-                <a href="@Url.Action("FindPerformer", "Search", new { q = c.Name})">
+                <a href="@Url.Action("FindPerformer", "Search", new { performer = c.Name})">
                     <span></span>
                     <span class="text">@c.Name</span>
                     <img class="img-responsive" src="@c.Thumbnail" />
@@ -81,9 +80,9 @@
 </div>
 <div class="row">
     @foreach(var c in Model.Albums) {
-        <div class="col-sm-4 col-md-4">
+        <div class="col-sx-6 col-sm-4 col-md-4">
             <div class="category">
-                <a href="@Url.Action("FindAlbum", "Search", new { q = c.AlbumName})">
+                <a href="@Url.Action("FindAlbum", "Search", new { album = c.AlbumName})">
                     <span></span>
                     <span class="text">@c.AlbumName</span>
                     <img class="img-responsive" src="@c.Thumbnail" />
