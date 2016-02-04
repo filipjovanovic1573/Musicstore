@@ -1,0 +1,131 @@
+﻿@model Musicstore.Models.Album
+
+@{
+    ViewBag.Title = "Album details";
+}
+<img src="@Model.Thumbnail" class="img-circle img-responsive" width="256" />
+<br />
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AlbumName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlbumName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfSongs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfSongs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateCreated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateModified)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateModified)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsActive)
+        </dd>
+
+        <dt>
+            Publisher
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Publisher.Name)
+        </dd>
+
+        <dt>
+            Performer
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Performer.Name)
+        </dd>
+
+    </dl>
+</div>
+<br />
+
+<table class="table" id="dtable">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Lenght
+            </th>
+            <th>
+                Genre
+            </th>
+            <th>
+                Link
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.SongsSL) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Length)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category.Name)
+                </td>
+                <td>
+                    <a href="@Html.DisplayFor(modelItem => item.Link)" download="@item.Name" class="btn-sm btn-success"><i class="glyphicon glyphicon-download-alt"></i> Download</a>
+                </td>
+                <td>
+                    <a href="@Url.Action("EditSong", new { id = item.Id })" class="btn-sm btn-warning"><i class="glyphicon glyphicon-edit"></i> Edit</a>
+                    <a href="@Url.Action("SongDetails", new { id = item.Id })" class="btn-sm btn-info"><i class="glyphicon glyphicon-list"></i> Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function () {
+        $('#dtable').DataTable();
+    });
+</script>
+
+@section scripts{
+    <link href="~/content/datatables/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <script src="~/scripts/datatables/jquery.datatables.min.js"></script>
+    <script src="~/scripts/datatables/datatables.bootstrap.min.js"></script>
+    <script src="~/scripts/datatables/datatables.responsive.min.js"></script>
+}

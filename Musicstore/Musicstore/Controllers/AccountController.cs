@@ -47,6 +47,10 @@ namespace Musicstore.Controllers {
                     ModelState.AddModelError(string.Empty, "You must have a confirmed email to log in.");
                     return View(model);
                 }
+                if(user.IsActive == false) {
+                    ModelState.AddModelError(string.Empty, "You account is deactivated. If you think this is an error contact administrator.");
+                    return View(model);
+                }
             }
 
             // This doesn't count login failures towards account lockout
@@ -123,7 +127,7 @@ namespace Musicstore.Controllers {
                 if(result.Succeeded) {
                     await UserManager.AddToRoleAsync(user.Id, "User");
                     //await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
-                    user.IsActive = true; 
+                    user.IsActive = true;
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
