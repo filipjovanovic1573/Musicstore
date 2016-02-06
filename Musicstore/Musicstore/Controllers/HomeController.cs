@@ -15,9 +15,9 @@ namespace Musicstore.Controllers {
     public class HomeController : BaseController {
         public async Task<ActionResult> Index() {
             var model = new HomeViewModel();
-            model.Categories = await Task.FromResult(db.Categories.Take(3).ToList());
-            model.Performers = await Task.FromResult(db.Performers.Where(p => !p.Name.Equals("Unknown") && p.IsActive == true).Take(3).ToList());
-            model.Albums = await Task.FromResult(db.Albums.Take(3).ToList());
+            model.Categories = await db.Categories.Take(3).ToListAsync();
+            model.Performers = await db.Performers.Where(p => !p.Name.Equals("Unknown") && p.IsActive == true).Take(3).ToListAsync();
+            model.Albums = await db.Albums.Take(3).ToListAsync();
             return View(model);
         }
 

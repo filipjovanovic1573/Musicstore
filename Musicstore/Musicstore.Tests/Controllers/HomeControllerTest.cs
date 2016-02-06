@@ -46,5 +46,60 @@ namespace Musicstore.Tests.Controllers {
             // Assert
             Assert.IsNotNull(result);
         }
+
+        [TestMethod]
+        public void AllCategories() {
+            HomeController controller = new HomeController();
+
+            // Act
+            ViewResult result = controller.AllCategories().Result as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void AllPerformers() {
+            HomeController controller = new HomeController();
+
+            // Act
+            ViewResult result = controller.AllPerformers().Result as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void AllAlbums() {
+            HomeController controller = new HomeController();
+
+            // Act
+            ViewResult result = controller.AllAlbums().Result as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void AllPublishers() {
+            HomeController controller = new HomeController();
+
+            // Act
+            ViewResult result = controller.AllPublishers().Result as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
+        public void AllPartners() {
+            HomeController controller = new HomeController();
+
+            // Act
+            ViewResult result = controller.AllPartners().Result as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
     }
 }

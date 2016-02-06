@@ -30,7 +30,6 @@ D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Musicstore.Tests.dll
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Musicstore.Tests.pdb
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\BotDetect.dll
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\BotDetect.Web.UI.Mvc.dll
-D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Musicstore.dll
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Newtonsoft.Json.dll
@@ -48,7 +47,6 @@ D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Microsoft.AspNet.Ide
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Microsoft.Owin.Security.dll
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Owin.dll
-D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\System.Web.Http.dll
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\EntityFramework.dll
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\NAudio.dll
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
@@ -57,7 +55,6 @@ D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Microsoft.Owin.Secur
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\System.Web.Http.WebHost.dll
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Musicstore.pdb
-D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Newtonsoft.Json.xml
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\System.Net.Http.Formatting.xml
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\System.Web.Helpers.xml
@@ -83,3 +80,11 @@ D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Microsoft.Owin.Host.
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\obj\Debug\Musicstore.Tests.csprojResolveAssemblyReference.cache
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\obj\Debug\Musicstore.Tests.dll
 D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\obj\Debug\Musicstore.Tests.pdb
+D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\MvcCheckBoxList.dll
+D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Controllers\WebTest1.webtest
+D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.WebTestFramework.dll
+D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.WebTestFramework.xml
+D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Controllers\OrderedTest1.orderedtest
+D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\Controllers\LoadTest1.loadtest

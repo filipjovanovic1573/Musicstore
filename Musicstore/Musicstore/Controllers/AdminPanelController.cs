@@ -457,8 +457,7 @@ namespace Musicstore.Controllers {
             Mp3FileReader song = new Mp3FileReader(path);
             return song.TotalTime;
         }
-
-        [ChildActionOnly]
+        
         public FileResult Download(string path, string name) {
             return File(path, System.Net.Mime.MediaTypeNames.Application.Octet, name);
         }

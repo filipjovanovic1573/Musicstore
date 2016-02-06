@@ -15,8 +15,8 @@ namespace Musicstore.Controllers {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         #region Category
-        [Route("api/{key}/MusicStoreApi/GetAll")]
-        public async Task<IHttpActionResult> GetAll(string key) {
+        [Route("api/{key}/MusicStoreApi/GetCategories")]
+        public async Task<IHttpActionResult> GetCategories(string key) {
             if(db.Api.Where(a => a.Key.Equals(key)).FirstOrDefault() == null) {
                 return Json(new ErrorMessage() { Error = "Authentication failed" });
             }
@@ -121,12 +121,22 @@ namespace Musicstore.Controllers {
         }
         #endregion
 
+        #region Performers
+        [HttpGet]
+        [Route("api/{key}/MusicStoreApi/GetPerformers/")]
+        public async Task<IHttpActionResult> GetPerformers(string key) {
+            if(db.Api.Where(a => a.Key.Equals(key)).FirstOrDefault() == null) {
+                return Json(new ErrorMessage() { Error = "Authentication failed" });
+            }
+
+            return Json(await db.Performers.ToListAsync());
+        }
+        #endregion
 
         protected override void Dispose(bool disposing) {
             if(disposing) {
                 db.Dispose();
             }
-
             base.Dispose(disposing);
         }
     }

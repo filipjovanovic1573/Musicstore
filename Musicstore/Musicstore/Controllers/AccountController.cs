@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Musicstore.Models;
 using Musicstore.ViewModels;
+using BotDetect.Web.UI.Mvc;
 
 namespace Musicstore.Controllers {
     [Authorize]
@@ -120,6 +121,7 @@ namespace Musicstore.Controllers {
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
+        [CaptchaValidation("CaptchaCode", "RegisterCaptcha", "Incorrect CAPTCHA code!")]
         public async Task<ActionResult> Register(RegisterViewModel model) {
             if(ModelState.IsValid) {
                 var user = new User { UserName = model.AccountName, Email = model.Email };

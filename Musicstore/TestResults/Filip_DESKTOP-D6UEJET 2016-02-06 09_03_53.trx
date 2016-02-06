@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="b6a9a559-bab1-492c-afa1-77f4bd7941e1" name="Filip@DESKTOP-D6UEJET 2016-02-06 09:03:53" runUser="DESKTOP-D6UEJET\Filip" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="c6bf2b34-778d-4310-97c8-9e3898e967fd">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment runDeploymentRoot="Filip_DESKTOP-D6UEJET 2016-02-06 09_03_53">
+      <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll" />
+      <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll" />
+      <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll" />
+      <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\MvcCheckBoxList.1.4.5\lib\net45\MvcCheckBoxList.dll" />
+      <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Captcha.3.0.18.0\lib\net45\BotDetect.dll" />
+      <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll" />
+      <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\Musicstore\bin\Musicstore.dll" />
+      <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll" />
+      <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
+      <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll" />
+      <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\System.Web.Http.dll" />
+      <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll" />
+      <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Captcha.3.0.18.0\lib\net45\BotDetect.Web.UI.Mvc.dll" />
+      <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll" />
+      <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll" />
+      <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Properties>
+      <Property name="TestSettingsUIType" value="UnitTest" />
+    </Properties>
+  </TestSettings>
+  <Times creation="2016-02-06T09:03:53.6094957+01:00" queuing="2016-02-06T09:03:55.6719899+01:00" start="2016-02-06T09:03:56.1094889+01:00" finish="2016-02-06T09:04:19.2436166+01:00" />
+  <ResultSummary outcome="Aborted">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <WebTest name="WebTest1" storage="d:\githubvisualstudio\musicstore\musicstore.tests\controllers\webtest1.webtest" id="07fddc41-5d38-459b-9534-961002a2d450" persistedWebTest="77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pg0KPFdlYlRlc3QgTmFtZT0iV2ViVGVzdDEiIElkPSIwN2ZkZGM0MS01ZDM4LTQ1OWItOTUzNC05NjEwMDJhMmQ0NTAiIE93bmVyPSIiIFByaW9yaXR5PSIyMTQ3NDgzNjQ3IiBFbmFibGVkPSJUcnVlIiBDc3NQcm9qZWN0U3RydWN0dXJlPSIiIENzc0l0ZXJhdGlvbj0iIiBUaW1lb3V0PSIwIiBXb3JrSXRlbUlkcz0iIiB4bWxucz0iaHR0cDovL21pY3Jvc29mdC5jb20vc2NoZW1hcy9WaXN1YWxTdHVkaW8vVGVhbVRlc3QvMjAxMCIgRGVzY3JpcHRpb249IiIgQ3JlZGVudGlhbFVzZXJOYW1lPSIiIENyZWRlbnRpYWxQYXNzd29yZD0iIiBQcmVBdXRoZW50aWNhdGU9IlRydWUiIFByb3h5PSJkZWZhdWx0IiBTdG9wT25FcnJvcj0iRmFsc2UiIFJlY29yZGVkUmVzdWx0RmlsZT0iIiBSZXN1bHRzTG9jYWxlPSIiPg0KICA8SXRlbXM+DQogICAgPFJlcXVlc3QgTWV0aG9kPSJHRVQiIEd1aWQ9ImE2ODZiOGI5LTY4ZDctNGNmYi05NTMwLWJjYjAxNDQ0YTFkZiIgVmVyc2lvbj0iMS4xIiBVcmw9Imh0dHA6Ly9sb2NhbGhvc3Q6MjI0OTUvSG9tZS9JbmRleCIgVGhpbmtUaW1lPSIwIiBUaW1lb3V0PSIzMDAiIFBhcnNlRGVwZW5kZW50UmVxdWVzdHM9IlRydWUiIEZvbGxvd1JlZGlyZWN0cz0iVHJ1ZSIgUmVjb3JkUmVzdWx0PSJUcnVlIiBDYWNoZT0iRmFsc2UiIFJlc3BvbnNlVGltZUdvYWw9IjAiIEVuY29kaW5nPSJ1dGYtOCIgRXhwZWN0ZWRIdHRwU3RhdHVzQ29kZT0iMCIgRXhwZWN0ZWRSZXNwb25zZVVybD0iIiBSZXBvcnRpbmdOYW1lPSIiIElnbm9yZUh0dHBTdGF0dXNDb2RlPSJGYWxzZSIgLz4NCiAgICA8UmVxdWVzdCBNZXRob2Q9IkdFVCIgR3VpZD0iMzIzOTZlNWQtMWE4Mi00ZTkxLWEwZmYtMzZjNzI4NjE2OThmIiBWZXJzaW9uPSIxLjEiIFVybD0iaHR0cDovL2xvY2FsaG9zdDoyMjQ5NS9Ib21lL0FsbEFsYnVtcyIgVGhpbmtUaW1lPSIwIiBUaW1lb3V0PSIzMDAiIFBhcnNlRGVwZW5kZW50UmVxdWVzdHM9IlRydWUiIEZvbGxvd1JlZGlyZWN0cz0iVHJ1ZSIgUmVjb3JkUmVzdWx0PSJUcnVlIiBDYWNoZT0iRmFsc2UiIFJlc3BvbnNlVGltZUdvYWw9IjAiIEVuY29kaW5nPSJ1dGYtOCIgRXhwZWN0ZWRIdHRwU3RhdHVzQ29kZT0iMCIgRXhwZWN0ZWRSZXNwb25zZVVybD0iIiBSZXBvcnRpbmdOYW1lPSIiIElnbm9yZUh0dHBTdGF0dXNDb2RlPSJGYWxzZSIgLz4NCiAgICA8UmVxdWVzdCBNZXRob2Q9IkdFVCIgR3VpZD0iNWY3ZDM4YjgtM2I1My00NGJiLTllYzAtNWRjMGRjMGUxNzBmIiBWZXJzaW9uPSIxLjEiIFVybD0iaHR0cDovL2xvY2FsaG9zdDoyMjQ5NS9Ib21lL0FsbFBlcmZvcm1lcnMiIFRoaW5rVGltZT0iMCIgVGltZW91dD0iMzAwIiBQYXJzZURlcGVuZGVudFJlcXVlc3RzPSJUcnVlIiBGb2xsb3dSZWRpcmVjdHM9IlRydWUiIFJlY29yZFJlc3VsdD0iVHJ1ZSIgQ2FjaGU9IkZhbHNlIiBSZXNwb25zZVRpbWVHb2FsPSIwIiBFbmNvZGluZz0idXRmLTgiIEV4cGVjdGVkSHR0cFN0YXR1c0NvZGU9IjAiIEV4cGVjdGVkUmVzcG9uc2VVcmw9IiIgUmVwb3J0aW5nTmFtZT0iIiBJZ25vcmVIdHRwU3RhdHVzQ29kZT0iRmFsc2UiIC8+DQogICAgPFJlcXVlc3QgTWV0aG9kPSJHRVQiIEd1aWQ9IjQ0MzI1MGY3LWNlYWYtNDdmYy1hYzQ0LTA2NWRiNzhmYzZmYiIgVmVyc2lvbj0iMS4xIiBVcmw9Imh0dHA6Ly9sb2NhbGhvc3Q6MjI0OTUvSG9tZS9BbGxDYXRlZ29yaWVzIiBUaGlua1RpbWU9IjAiIFRpbWVvdXQ9IjMwMCIgUGFyc2VEZXBlbmRlbnRSZXF1ZXN0cz0iVHJ1ZSIgRm9sbG93UmVkaXJlY3RzPSJUcnVlIiBSZWNvcmRSZXN1bHQ9IlRydWUiIENhY2hlPSJGYWxzZSIgUmVzcG9uc2VUaW1lR29hbD0iMCIgRW5jb2Rpbmc9InV0Zi04IiBFeHBlY3RlZEh0dHBTdGF0dXNDb2RlPSIwIiBFeHBlY3RlZFJlc3BvbnNlVXJsPSIiIFJlcG9ydGluZ05hbWU9IiIgSWdub3JlSHR0cFN0YXR1c0NvZGU9IkZhbHNlIiAvPg0KICAgIDxSZXF1ZXN0IE1ldGhvZD0iR0VUIiBHdWlkPSJhOTcwYThjNC05MTgwLTQ5MDUtYWFiNC1iNTljYTczM2JjYmYiIFZlcnNpb249IjEuMSIgVXJsPSJodHRwOi8vbG9jYWxob3N0OjIyNDk1L0hvbWUvU29uZ0RldGFpbHMvMGM1YjA2YjItNGNmZC00NjdmLWIxMjctMTVlYjYyOWFiY2U2IiBUaGlua1RpbWU9IjAiIFRpbWVvdXQ9IjMwMCIgUGFyc2VEZXBlbmRlbnRSZXF1ZXN0cz0iVHJ1ZSIgRm9sbG93UmVkaXJlY3RzPSJUcnVlIiBSZWNvcmRSZXN1bHQ9IlRydWUiIENhY2hlPSJGYWxzZSIgUmVzcG9uc2VUaW1lR29hbD0iMCIgRW5jb2Rpbmc9InV0Zi04IiBFeHBlY3RlZEh0dHBTdGF0dXNDb2RlPSIwIiBFeHBlY3RlZFJlc3BvbnNlVXJsPSIiIFJlcG9ydGluZ05hbWU9IiIgSWdub3JlSHR0cFN0YXR1c0NvZGU9IkZhbHNlIiAvPg0KICAgIDxSZXF1ZXN0IE1ldGhvZD0iR0VUIiBHdWlkPSJmYjQxZTVhOC1lZGM2LTQ2NzQtODAwNC1lNGMxZmI4MDk1NDMiIFZlcnNpb249IjEuMSIgVXJsPSJodHRwOi8vbG9jYWxob3N0OjIyNDk1L1NlYXJjaC9GaW5kQWxidW0iIFRoaW5rVGltZT0iMCIgVGltZW91dD0iMzAwIiBQYXJzZURlcGVuZGVudFJlcXVlc3RzPSJUcnVlIiBGb2xsb3dSZWRpcmVjdHM9IlRydWUiIFJlY29yZFJlc3VsdD0iVHJ1ZSIgQ2FjaGU9IkZhbHNlIiBSZXNwb25zZVRpbWVHb2FsPSIwIiBFbmNvZGluZz0idXRmLTgiIEV4cGVjdGVkSHR0cFN0YXR1c0NvZGU9IjAiIEV4cGVjdGVkUmVzcG9uc2VVcmw9IiIgUmVwb3J0aW5nTmFtZT0iIiBJZ25vcmVIdHRwU3RhdHVzQ29kZT0iRmFsc2UiPg0KICAgICAgPFF1ZXJ5U3RyaW5nUGFyYW1ldGVycz4NCiAgICAgICAgPFF1ZXJ5U3RyaW5nUGFyYW1ldGVyIE5hbWU9ImFsYnVtIiBWYWx1ZT0iSGlnaHdheSUyMHRvJTIwSGVsbCIgUmVjb3JkZWRWYWx1ZT0iIiBDb3JyZWxhdGlvbkJpbmRpbmc9IiIgVXJsRW5jb2RlPSJGYWxzZSIgVXNlVG9Hcm91cFJlc3VsdHM9IkZhbHNlIiAvPg0KICAgICAgPC9RdWVyeVN0cmluZ1BhcmFtZXRlcnM+DQogICAgPC9SZXF1ZXN0Pg0KICAgIDxSZXF1ZXN0IE1ldGhvZD0iR0VUIiBHdWlkPSI1OGVhYmViOC02ZmE1LTQxYzgtOTRiZi1kMjIyZTgzZjNkOWEiIFZlcnNpb249IjEuMSIgVXJsPSJodHRwOi8vbG9jYWxob3N0OjIyNDk1L1NlYXJjaC9GaW5kUGVyZm9ybWVyIiBUaGlua1RpbWU9IjAiIFRpbWVvdXQ9IjMwMCIgUGFyc2VEZXBlbmRlbnRSZXF1ZXN0cz0iVHJ1ZSIgRm9sbG93UmVkaXJlY3RzPSJUcnVlIiBSZWNvcmRSZXN1bHQ9IlRydWUiIENhY2hlPSJGYWxzZSIgUmVzcG9uc2VUaW1lR29hbD0iMCIgRW5jb2Rpbmc9InV0Zi04IiBFeHBlY3RlZEh0dHBTdGF0dXNDb2RlPSIwIiBFeHBlY3RlZFJlc3BvbnNlVXJsPSIiIFJlcG9ydGluZ05hbWU9IiIgSWdub3JlSHR0cFN0YXR1c0NvZGU9IkZhbHNlIj4NCiAgICAgIDxRdWVyeVN0cmluZ1BhcmFtZXRlcnM+DQogICAgICAgIDxRdWVyeVN0cmluZ1BhcmFtZXRlciBOYW1lPSJwZXJmb3JtZXIiIFZhbHVlPSJBQyUyRkRDIiBSZWNvcmRlZFZhbHVlPSIiIENvcnJlbGF0aW9uQmluZGluZz0iIiBVcmxFbmNvZGU9IkZhbHNlIiBVc2VUb0dyb3VwUmVzdWx0cz0iRmFsc2UiIC8+DQogICAgICA8L1F1ZXJ5U3RyaW5nUGFyYW1ldGVycz4NCiAgICA8L1JlcXVlc3Q+DQogICAgPFJlcXVlc3QgTWV0aG9kPSJHRVQiIEd1aWQ9IjU5YzNlZTM5LWYyMGUtNDZhMS1iNDkzLTgwZTMxMzEyNGNiZiIgVmVyc2lvbj0iMS4xIiBVcmw9Imh0dHA6Ly9sb2NhbGhvc3Q6MjI0OTUvU2VhcmNoL0ZpbmRDYXRlZ29yeSIgVGhpbmtUaW1lPSIwIiBUaW1lb3V0PSIzMDAiIFBhcnNlRGVwZW5kZW50UmVxdWVzdHM9IlRydWUiIEZvbGxvd1JlZGlyZWN0cz0iVHJ1ZSIgUmVjb3JkUmVzdWx0PSJUcnVlIiBDYWNoZT0iRmFsc2UiIFJlc3BvbnNlVGltZUdvYWw9IjAiIEVuY29kaW5nPSJ1dGYtOCIgRXhwZWN0ZWRIdHRwU3RhdHVzQ29kZT0iMCIgRXhwZWN0ZWRSZXNwb25zZVVybD0iIiBSZXBvcnRpbmdOYW1lPSIiIElnbm9yZUh0dHBTdGF0dXNDb2RlPSJGYWxzZSI+DQogICAgICA8UXVlcnlTdHJpbmdQYXJhbWV0ZXJzPg0KICAgICAgICA8UXVlcnlTdHJpbmdQYXJhbWV0ZXIgTmFtZT0iY2F0ZWdvcnkiIFZhbHVlPSJSb2NrIiBSZWNvcmRlZFZhbHVlPSIiIENvcnJlbGF0aW9uQmluZGluZz0iIiBVcmxFbmNvZGU9IkZhbHNlIiBVc2VUb0dyb3VwUmVzdWx0cz0iRmFsc2UiIC8+DQogICAgICA8L1F1ZXJ5U3RyaW5nUGFyYW1ldGVycz4NCiAgICA8L1JlcXVlc3Q+DQogIDwvSXRlbXM+DQo8L1dlYlRlc3Q+">
+      <Execution id="7d289e11-4d7a-40a7-bbe4-f1a63c68117f" />
+    </WebTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry isTransparent="false" testId="07fddc41-5d38-459b-9534-961002a2d450" executionId="7d289e11-4d7a-40a7-bbe4-f1a63c68117f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <WebTestResult executionId="7d289e11-4d7a-40a7-bbe4-f1a63c68117f" testId="07fddc41-5d38-459b-9534-961002a2d450" testName="WebTest1" computerName="DESKTOP-D6UEJET" duration="00:00:16.6743112" startTime="2016-02-06T09:03:56.2344920+01:00" endTime="2016-02-06T09:04:19.1306198+01:00" testType="4e7599fa-5ecb-43e9-a887-cd63cf72d207" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7d289e11-4d7a-40a7-bbe4-f1a63c68117f">
+      <Output>
+        <ErrorInfo>
+          <Message>8 primary requests, 0 dependant requests and 0 conditional rules failed</Message>
+        </ErrorInfo>
+      </Output>
+      <TestSettings name="Local" id="c6bf2b34-778d-4310-97c8-9e3898e967fd">
+        <Description>These are default test settings for a local test run.</Description>
+        <Deployment runDeploymentRoot="Filip_DESKTOP-D6UEJET 2016-02-06 09_03_53">
+          <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll" />
+          <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll" />
+          <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\MvcCheckBoxList.1.4.5\lib\net45\MvcCheckBoxList.dll" />
+          <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Captcha.3.0.18.0\lib\net45\BotDetect.dll" />
+          <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\Musicstore.Tests\bin\Debug\System.Web.Http.dll" />
+          <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll" />
+          <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\Musicstore\bin\Musicstore.dll" />
+          <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll" />
+          <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll" />
+          <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll" />
+          <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
+          <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll" />
+          <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll" />
+          <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Captcha.3.0.18.0\lib\net45\BotDetect.Web.UI.Mvc.dll" />
+          <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll" />
+          <DeploymentItem filename="D:\GitHubVisualStudio\Musicstore\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll" />
+        </Deployment>
+        <Execution>
+          <TestTypeSpecific>
+            <WebTestRunConfiguration testTypeId="4e7599fa-5ecb-43e9-a887-cd63cf72d207">
+              <Browser name="Internet Explorer 9.0" MaxConnections="6">
+                <Headers>
+                  <Header name="User-Agent" value="Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)" />
+                  <Header name="Accept" value="*/*" />
+                  <Header name="Accept-Language" value="{{$IEAcceptLanguage}}" />
+                  <Header name="Accept-Encoding" value="GZIP" />
+                </Headers>
+              </Browser>
+            </WebTestRunConfiguration>
+          </TestTypeSpecific>
+          <AgentRule name="Execution Agents">
+          </AgentRule>
+        </Execution>
+        <Properties>
+          <Property name="TestSettingsUIType" value="UnitTest" />
+        </Properties>
+      </TestSettings>
+      <WebTestResultFilePath>
+      </WebTestResultFilePath>
+    </WebTestResult>
+  </Results>
+</TestRun>
