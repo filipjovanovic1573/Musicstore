@@ -12,7 +12,9 @@ using System.Web;
 using System.Web.Mvc;
 
 namespace Musicstore.Controllers {
+    [Authorize]
     public class HomeController : BaseController {
+        [AllowAnonymous]
         public async Task<ActionResult> Index() {
             var model = new HomeViewModel();
             model.Categories = await db.Categories.Take(3).ToListAsync();
@@ -20,23 +22,23 @@ namespace Musicstore.Controllers {
             model.Albums = await db.Albums.Take(3).ToListAsync();
             return View(model);
         }
-
+        [AllowAnonymous]
         public ActionResult About() {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
-
+        [AllowAnonymous]
         public ActionResult Contact() {
             ViewBag.Message = "Your contact page.";
 
             return View();
         }
-
+        [AllowAnonymous]
         public ActionResult PartnerProgram() {
             return View();
         }
-
+        [AllowAnonymous]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> PartnerProgram(Partner model) {
@@ -50,7 +52,7 @@ namespace Musicstore.Controllers {
             }
             return View("Error");
         }
-
+        [AllowAnonymous]
         public ActionResult PartnerList() {
             return View();
         }
@@ -75,7 +77,7 @@ namespace Musicstore.Controllers {
         public async Task<ActionResult> AllPublishers() {
             return View(await Task.FromResult(db.Publishers.Where(p => p.IsActive == true).ToList()));
         }
-
+        [AllowAnonymous]
         public async Task<ActionResult> AllPartners() {
             return View(await db.Partners.Where(p => p.Approved == true).ToListAsync());
         }
@@ -86,8 +88,7 @@ namespace Musicstore.Controllers {
             }
             return View(await db.Songs.Where(p => p.Id.Equals(id)).FirstOrDefaultAsync());
         }
-
-        [Authorize]
+        
         public ActionResult GetApi() {
             return View();
         }
