@@ -218,6 +218,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\ICategoryRepository.cs" />
     <Compile Include="Repository\IPartnerRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\PartnerRepository.cs" />
