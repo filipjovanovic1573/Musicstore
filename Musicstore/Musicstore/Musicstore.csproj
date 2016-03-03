@@ -222,8 +222,10 @@
     <Compile Include="Repository\ICategoryRepository.cs" />
     <Compile Include="Repository\IPartnerRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\ISongRepository.cs" />
     <Compile Include="Repository\PartnerRepository.cs" />
     <Compile Include="Repository\Repository.cs" />
+    <Compile Include="Repository\SongRepository.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="ViewModels\AdminPanelViewModels.cs" />
