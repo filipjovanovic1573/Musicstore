@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNet.Identity;
 using Musicstore.Models;
 using Musicstore.Other;
+using Musicstore.Repository;
 using Musicstore.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,9 @@ using System.Web.Mvc;
 namespace Musicstore.Controllers {
     [Authorize]
     public class HomeController : BaseController {
+
+        private PartnerRepository PartnerRepo { get { return new PartnerRepository(); } }
+
         [AllowAnonymous]
         public async Task<ActionResult> Index() {
             var model = new HomeViewModel();
@@ -46,8 +50,7 @@ namespace Musicstore.Controllers {
             model.Approved = false;
             model.Id = Guid.NewGuid().ToString();
             if(ModelState.IsValid) {
-                db.Partners.Add(model);
-                await db.SaveChangesAsync();
+                await PartnerRepo.CreateAsync(model);
                 return RedirectToAction("Index");
             }
             return View("Error");
@@ -112,6 +115,7 @@ namespace Musicstore.Controllers {
         protected override void Dispose(bool disposing) {
             if(disposing) {
                 db.Dispose();
+                PartnerRepo.Dispose();
                 UserManager.Dispose();
             }
             base.Dispose(disposing);
